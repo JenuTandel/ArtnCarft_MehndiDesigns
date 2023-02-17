@@ -1,7 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'about-us',
+    component: AboutUsComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
+  },
   {
     path: 'login',
     loadChildren: () =>
@@ -13,11 +33,6 @@ const routes: Routes = [
       import('./registration/registration.module').then(
         (m) => m.RegistrationModule
       ),
-  },
-  {
-    path: 'order',
-    loadChildren: () =>
-      import('./my-order/my-order.module').then((m) => m.MyOrderModule),
   },
   {
     path: 'my-order',
@@ -38,13 +53,6 @@ const routes: Routes = [
     path: 'art-n-craft',
     loadChildren: () =>
       import('./art-n-craft/art-n-craft.module').then((m) => m.ArtNCraftModule),
-  },
-  {
-    path: 'mehndi-design',
-    loadChildren: () =>
-      import('./mehndi-designs/mehndi-designs.module').then(
-        (m) => m.MehndiDesignsModule
-      ),
   },
   {
     path: 'mehndi-designs',
