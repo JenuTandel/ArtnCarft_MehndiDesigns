@@ -1,0 +1,31 @@
+.text-login {
+    margin-bottom: 120px;
+}
+
+.icon-wrapper {
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    top: -75px;
+    left: 165px
+}
+
+.form-wrapper {
+    width: 495px;
+    padding: 40px 50px;
+
+    form {
+        margin-top: 110px;
+        font-size: 20px;
+
+        button {
+            font-size: 20px;
+            padding: 10px 60px;
+        }
+
+        input::placeholder {
+            font-size: 20px;
+            color: $gray-400;
+        }
+    }
+}
