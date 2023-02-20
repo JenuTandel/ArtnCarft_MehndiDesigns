@@ -1,0 +1,18 @@
+.image-wrapper {
+    min-width: 366px;
+    height: 100%;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.description {
+    p {
+        font-size: 20px;
+        text-align: justify;
+    }
+}
