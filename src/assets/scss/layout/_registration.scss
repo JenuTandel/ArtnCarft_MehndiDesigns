@@ -1,0 +1,52 @@
+.step-bullet {
+    height: 55px;
+    width: 55px;
+    z-index: 1;
+
+    span {
+        font-size: 24px;
+    }
+
+}
+
+.active {
+    background-color: $warning;
+}
+
+.inactive {
+    background-color: $warning;
+    opacity: 0.7;
+}
+
+
+.active-line-left {
+    width: 33%;
+    left: 250px;
+    z-index: 0;
+}
+
+.active-line-right {
+    width: 33%;
+    right: 250px;
+    z-index: 0;
+}
+
+.signup-text {
+    margin-bottom: 50px;
+}
+
+.registration-form-wrapper {
+    width: 80%;
+    padding: 40px 50px;
+    font-size: 20px;
+
+    button {
+        font-size: 20px;
+        padding: 10px 60px;
+    }
+
+    input::placeholder {
+        font-size: 20px;
+        color: $gray-400;
+    }
+}
