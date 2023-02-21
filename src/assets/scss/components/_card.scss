@@ -1,0 +1,33 @@
+.card {
+    height: 415px;
+    width: 310px;
+    overflow: hidden;
+    background-color: $gray-300;
+
+    .card-image {
+        height: 300px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-body {
+        border-top: 1px solid #CBD0CF;
+
+        p {
+            font-size: 22px;
+            margin-top: 12px;
+        }
+
+        .price {
+            font-size: 22px;
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+    }
+}
