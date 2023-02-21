@@ -1,0 +1,24 @@
+.icons-wrapper {
+    height: 57px;
+    width: 57px;
+    border-radius: 50%;
+    border: 2px solid black;
+
+    .icon {
+        font-size: 35px;
+    }
+}
+
+.social-media-icons {
+    .icon {
+        font-size: 55px;
+    }
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+textarea::placeholder {
+    font-size: 20px;
+}
