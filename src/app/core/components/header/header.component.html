@@ -4,17 +4,21 @@
   >
     <figure class="brnad-logo"></figure>
     <nav class="nav align-items-center">
-      <a class="nav-link">Home</a>
-      <a class="nav-link">About us</a>
+      <a class="nav-link" [routerLink]="['/home']">Home</a>
+      <a class="nav-link" [routerLink]="['/about-us']">About us</a>
       <div ngbDropdown>
         <a class="nav-link" id="gfg" ngbDropdownToggle>Services</a>
         <div ngbDropdownMenu="gfg">
-          <button ngbDropdownItem>Art n Craft</button>
-          <button ngbDropdownItem>Mehndi Designs</button>
+          <button ngbDropdownItem [routerLink]="['/art-n-craft']">
+            Art n Craft
+          </button>
+          <button ngbDropdownItem [routerLink]="['/mehndi-designs']">
+            Mehndi Designs
+          </button>
         </div>
       </div>
-      <a class="nav-link">Contact us</a>
-      <a class="nav-link">Login</a>
+      <a class="nav-link" [routerLink]="['/contact-us']">Contact us</a>
+      <a class="nav-link" [routerLink]="['/login']">Login</a>
     </nav>
   </div>
 </header>
