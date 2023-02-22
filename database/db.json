@@ -1,275 +1,294 @@
 {
-    "registrationData":[],
-    "artncraftCategory":[
-        {
-            "id":1,
-            "categoryName": "Birthday Cards",
-            "categoryimgpath": "images/birthcard.webp"
-        },
-        {
-            "id":2,
-            "categoryName": "Gift Box",
-            "categoryimgpath": "images/gift.jpg"
-        },
-        {
-            "id":3,
-            "categoryName": "Scrap Book",
-            "categoryimgpath": "images/book.jpg"
-        },
-        {
-            "id":4,
-            "categoryName": "Explosion Box",
-            "categoryimgpath": "images/gift2.jpg"
-        },
-        {
-            "id":5,
-            "categoryName": "Birthday Cards",
-            "categoryimgpath": "images/birthcard.webp"
-        },
-        {
-            "id":6,
-            "categoryName": "Gift Box",
-            "categoryimgpath": "images/gift.jpg"
-        },
-        {
-            "id":7,
-            "categoryName": "Scrap Book",
-            "categoryimgpath": "images/book.jpg"
-        },
-        {
-            "id":8,
-            "categoryName": "Explosion Box",
-            "categoryimgpath": "images/gift2.jpg"
-        },
-        {
-            "id":9,
-            "categoryName": "Birthday Cards",
-            "categoryimgpath": "images/birthcard.webp"
-        },
-        {
-            "id":10,
-            "categoryName": "Gift Box",
-            "categoryimgpath": "images/gift.jpg"
-        },
-        {
-            "id":11,
-            "categoryName": "Scrap Book",
-            "categoryimgpath": "images/book.jpg"
-        },
-        {
-            "id":12,
-            "categoryName": "Explosion Box",
-            "categoryimgpath": "images/gift2.jpg"
-        }
-    ],
-    "mehndiDesignCategory":[
-        {
-            "id":1,
-            "categoryName": "Simple Designs",
-            "categoryimgpath": "images/m1.jpg"
-        },
-        {
-            "id":2,
-            "categoryName": "Bridal Mehndi Designs",
-            "categoryimgpath": "images/a.webp"
-        },
-        {
-            "id":3,
-            "categoryName": "Back Hand Designs",
-            "categoryimgpath": "images/back.jpg"
-        },
-        {
-            "id":4,
-            "categoryName": "Different Shapes",
-            "categoryimgpath": "images/shapes.jpg"
-        },
-        {
-            "id":5,
-            "categoryName": "Simple Designs",
-            "categoryimgpath": "images/m1.jpg"
-        },
-        {
-            "id":6,
-            "categoryName": "Bridal Mehndi Designs",
-            "categoryimgpath": "images/a.webp"
-        },
-        {
-            "id":7,
-            "categoryName": "Back Hand Designs",
-            "categoryimgpath": "images/back.jpg"
-        },
-        {
-            "id":8,
-            "categoryName": "Different Shapes",
-            "categoryimgpath": "images/shapes.jpg"
-        },
-        {
-            "id":9,
-            "categoryName": "Simple Designs",
-            "categoryimgpath": "images/m1.jpg"
-        },
-        {
-            "id":10,
-            "categoryName": "Bridal Mehndi Designs",
-            "categoryimgpath": "images/a.webp"
-        },
-        {
-            "id":11,
-            "categoryName": "Back Hand Designs",
-            "categoryimgpath": "images/back.jpg"
-        },
-        {
-            "id":12,
-            "categoryName": "Different Shapes",
-            "categoryimgpath": "images/shapes.jpg"
-        }
-    ],
-    "birthdayCards":[
-        {
-            "id":1,
-            "birthdayCardName":"Green Birthday card",
-            "price":100,
-            "birthdayCardImgpath":"images/birthday4.webp"
-        },
-        {
-            "id":2,
-            "birthdayCardName":"Pink flower Birthday card",
-            "price":150,
-            "birthdayCardImgpath":"images/birthdaycard1.jpg"
-        },
-        {
-            "id":3,
-            "birthdayCardName":"Quilling Birthday card",
-            "price":200,
-            "birthdayCardImgpath":"images/birthday3.jpg"
-        },
-        {
-            "id":4,
-            "birthdayCardName":"Butterfly Birthday card",
-            "price":500,
-            "birthdayCardImgpath":"images/birthday2.jpeg"
-        },
-        {
-            "id":5,
-            "birthdayCardName":"Green Birthday card",
-            "price":100,
-            "birthdayCardImgpath":"images/birthday4.webp"
-        },
-        {
-            "id":6,
-            "birthdayCardName":"Pink flower Birthday card",
-            "price":150,
-            "birthdayCardImgpath":"images/birthdaycard1.jpg"
-        },
-        {
-            "id":7,
-            "birthdayCardName":"Quilling Birthday card",
-            "price":200,
-            "birthdayCardImgpath":"images/birthday3.jpg"
-        },
-        {
-            "id":8,
-            "birthdayCardName":"Butterfly Birthday card",
-            "price":500,
-            "birthdayCardImgpath":"images/birthday2.jpeg"
-        },
-        {
-            "id":9,
-            "birthdayCardName":"Green Birthday card",
-            "price":100,
-            "birthdayCardImgpath":"images/birthday4.webp"
-        },
-        {
-            "id":10,
-            "birthdayCardName":"Pink flower Birthday card",
-            "price":150,
-            "birthdayCardImgpath":"images/birthdaycard1.jpg"
-        },
-        {
-            "id":11,
-            "birthdayCardName":"Quilling Birthday card",
-            "price":200,
-            "birthdayCardImgpath":"images/birthday3.jpg"
-        },
-        {
-            "id":12,
-            "birthdayCardName":"Butterfly Birthday card",
-            "price":500,
-            "birthdayCardImgpath":"images/birthday2.jpeg"
-        }
-    ],
-    "bridalMehndiDesigns":[
-        {
-            "id":1,
-            "mehndiName":"Bridal mehndi with 4 figure",
-            "price":7000,
-            "img":"images/br2.jpg"
-        },
-        {
-            "id":2,
-            "mehndiName":"Simple without figure",
-            "price":4000,
-            "img":"images/a.webp"
-        },
-        {
-            "id":3,
-            "mehndiName":"Bridal mehndi 3 figure",
-            "price":6000,
-            "img":"images/br4.jpg"
-        },
-        {
-            "id":4,
-            "mehndiName":"Bridal mehndi 8 figure",
-            "price":10000,
-            "img":"images/br3.jpg"
-        },
-        {
-            "id":5,
-            "mehndiName":"Bridal mehndi with 4 figure",
-            "price":7000,
-            "img":"images/br2.jpg"
-        },
-        {
-            "id":6,
-            "mehndiName":"Simple without figure",
-            "price":4000,
-            "img":"images/a.webp"
-        },
-        {
-            "id":7,
-            "mehndiName":"Bridal mehndi 3 figure",
-            "price":6000,
-            "img":"images/br4.jpg"
-        },
-        {
-            "id":8,
-            "mehndiName":"Bridal mehndi 8 figure",
-            "price":10000,
-            "img":"images/br3.jpg"
-        },
-        {
-            "id":9,
-            "mehndiName":"Bridal mehndi with 4 figure",
-            "price":7000,
-            "img":"images/br2.jpg"
-        },
-        {
-            "id":10,
-            "mehndiName":"Simple without figure",
-            "price":4000,
-            "img":"images/a.webp"
-        },
-        {
-            "id":11,
-            "mehndiName":"Bridal mehndi 3 figure",
-            "price":6000,
-            "img":"images/br4.jpg"
-        },
-        {
-            "id":12,
-            "mehndiName":"Bridal mehndi 8 figure",
-            "price":10000,
-            "img":"images/br3.jpg"
-        }
-    ]
+  "registrationData": [
+    {
+      "name": "Jinal Tandel",
+      "password": "123456",
+      "contactNumber": "9033982833",
+      "address": "Kosamba",
+      "city": "Valsad",
+      "pincode": "396001",
+      "id": 1
+    },
+    {
+      "name": "",
+      "password": "",
+      "contactNumber": "",
+      "address": "",
+      "city": "",
+      "pincode": "",
+      "id": 2
+    }
+  ],
+  "artncraftCategory": [
+    {
+      "id": 1,
+      "categoryName": "Birthday Cards",
+      "categoryimgpath": "images/birthcard.webp"
+    },
+    {
+      "id": 2,
+      "categoryName": "Gift Box",
+      "categoryimgpath": "images/gift.jpg"
+    },
+    {
+      "id": 3,
+      "categoryName": "Scrap Book",
+      "categoryimgpath": "images/book.jpg"
+    },
+    {
+      "id": 4,
+      "categoryName": "Explosion Box",
+      "categoryimgpath": "images/gift2.jpg"
+    },
+    {
+      "id": 5,
+      "categoryName": "Birthday Cards",
+      "categoryimgpath": "images/birthcard.webp"
+    },
+    {
+      "id": 6,
+      "categoryName": "Gift Box",
+      "categoryimgpath": "images/gift.jpg"
+    },
+    {
+      "id": 7,
+      "categoryName": "Scrap Book",
+      "categoryimgpath": "images/book.jpg"
+    },
+    {
+      "id": 8,
+      "categoryName": "Explosion Box",
+      "categoryimgpath": "images/gift2.jpg"
+    },
+    {
+      "id": 9,
+      "categoryName": "Birthday Cards",
+      "categoryimgpath": "images/birthcard.webp"
+    },
+    {
+      "id": 10,
+      "categoryName": "Gift Box",
+      "categoryimgpath": "images/gift.jpg"
+    },
+    {
+      "id": 11,
+      "categoryName": "Scrap Book",
+      "categoryimgpath": "images/book.jpg"
+    },
+    {
+      "id": 12,
+      "categoryName": "Explosion Box",
+      "categoryimgpath": "images/gift2.jpg"
+    }
+  ],
+  "mehndiDesignCategory": [
+    {
+      "id": 1,
+      "categoryName": "Simple Designs",
+      "categoryimgpath": "images/m1.jpg"
+    },
+    {
+      "id": 2,
+      "categoryName": "Bridal Mehndi Designs",
+      "categoryimgpath": "images/a.webp"
+    },
+    {
+      "id": 3,
+      "categoryName": "Back Hand Designs",
+      "categoryimgpath": "images/back.jpg"
+    },
+    {
+      "id": 4,
+      "categoryName": "Different Shapes",
+      "categoryimgpath": "images/shapes.jpg"
+    },
+    {
+      "id": 5,
+      "categoryName": "Simple Designs",
+      "categoryimgpath": "images/m1.jpg"
+    },
+    {
+      "id": 6,
+      "categoryName": "Bridal Mehndi Designs",
+      "categoryimgpath": "images/a.webp"
+    },
+    {
+      "id": 7,
+      "categoryName": "Back Hand Designs",
+      "categoryimgpath": "images/back.jpg"
+    },
+    {
+      "id": 8,
+      "categoryName": "Different Shapes",
+      "categoryimgpath": "images/shapes.jpg"
+    },
+    {
+      "id": 9,
+      "categoryName": "Simple Designs",
+      "categoryimgpath": "images/m1.jpg"
+    },
+    {
+      "id": 10,
+      "categoryName": "Bridal Mehndi Designs",
+      "categoryimgpath": "images/a.webp"
+    },
+    {
+      "id": 11,
+      "categoryName": "Back Hand Designs",
+      "categoryimgpath": "images/back.jpg"
+    },
+    {
+      "id": 12,
+      "categoryName": "Different Shapes",
+      "categoryimgpath": "images/shapes.jpg"
+    }
+  ],
+  "birthdayCards": [
+    {
+      "id": 1,
+      "birthdayCardName": "Green Birthday card",
+      "price": 100,
+      "birthdayCardImgpath": "images/birthday4.webp"
+    },
+    {
+      "id": 2,
+      "birthdayCardName": "Pink flower Birthday card",
+      "price": 150,
+      "birthdayCardImgpath": "images/birthdaycard1.jpg"
+    },
+    {
+      "id": 3,
+      "birthdayCardName": "Quilling Birthday card",
+      "price": 200,
+      "birthdayCardImgpath": "images/birthday3.jpg"
+    },
+    {
+      "id": 4,
+      "birthdayCardName": "Butterfly Birthday card",
+      "price": 500,
+      "birthdayCardImgpath": "images/birthday2.jpeg"
+    },
+    {
+      "id": 5,
+      "birthdayCardName": "Green Birthday card",
+      "price": 100,
+      "birthdayCardImgpath": "images/birthday4.webp"
+    },
+    {
+      "id": 6,
+      "birthdayCardName": "Pink flower Birthday card",
+      "price": 150,
+      "birthdayCardImgpath": "images/birthdaycard1.jpg"
+    },
+    {
+      "id": 7,
+      "birthdayCardName": "Quilling Birthday card",
+      "price": 200,
+      "birthdayCardImgpath": "images/birthday3.jpg"
+    },
+    {
+      "id": 8,
+      "birthdayCardName": "Butterfly Birthday card",
+      "price": 500,
+      "birthdayCardImgpath": "images/birthday2.jpeg"
+    },
+    {
+      "id": 9,
+      "birthdayCardName": "Green Birthday card",
+      "price": 100,
+      "birthdayCardImgpath": "images/birthday4.webp"
+    },
+    {
+      "id": 10,
+      "birthdayCardName": "Pink flower Birthday card",
+      "price": 150,
+      "birthdayCardImgpath": "images/birthdaycard1.jpg"
+    },
+    {
+      "id": 11,
+      "birthdayCardName": "Quilling Birthday card",
+      "price": 200,
+      "birthdayCardImgpath": "images/birthday3.jpg"
+    },
+    {
+      "id": 12,
+      "birthdayCardName": "Butterfly Birthday card",
+      "price": 500,
+      "birthdayCardImgpath": "images/birthday2.jpeg"
+    }
+  ],
+  "bridalMehndiDesigns": [
+    {
+      "id": 1,
+      "mehndiName": "Bridal mehndi with 4 figure",
+      "price": 7000,
+      "img": "images/br2.jpg"
+    },
+    {
+      "id": 2,
+      "mehndiName": "Simple without figure",
+      "price": 4000,
+      "img": "images/a.webp"
+    },
+    {
+      "id": 3,
+      "mehndiName": "Bridal mehndi 3 figure",
+      "price": 6000,
+      "img": "images/br4.jpg"
+    },
+    {
+      "id": 4,
+      "mehndiName": "Bridal mehndi 8 figure",
+      "price": 10000,
+      "img": "images/br3.jpg"
+    },
+    {
+      "id": 5,
+      "mehndiName": "Bridal mehndi with 4 figure",
+      "price": 7000,
+      "img": "images/br2.jpg"
+    },
+    {
+      "id": 6,
+      "mehndiName": "Simple without figure",
+      "price": 4000,
+      "img": "images/a.webp"
+    },
+    {
+      "id": 7,
+      "mehndiName": "Bridal mehndi 3 figure",
+      "price": 6000,
+      "img": "images/br4.jpg"
+    },
+    {
+      "id": 8,
+      "mehndiName": "Bridal mehndi 8 figure",
+      "price": 10000,
+      "img": "images/br3.jpg"
+    },
+    {
+      "id": 9,
+      "mehndiName": "Bridal mehndi with 4 figure",
+      "price": 7000,
+      "img": "images/br2.jpg"
+    },
+    {
+      "id": 10,
+      "mehndiName": "Simple without figure",
+      "price": 4000,
+      "img": "images/a.webp"
+    },
+    {
+      "id": 11,
+      "mehndiName": "Bridal mehndi 3 figure",
+      "price": 6000,
+      "img": "images/br4.jpg"
+    },
+    {
+      "id": 12,
+      "mehndiName": "Bridal mehndi 8 figure",
+      "price": 10000,
+      "img": "images/br3.jpg"
+    }
+  ]
 }
