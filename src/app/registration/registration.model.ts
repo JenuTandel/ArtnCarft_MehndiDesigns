@@ -1,6 +1,7 @@
 export class RegistrationData {
   id: number;
   name: string;
+  contactNumber: number;
   password: string;
   address: string;
   city: string;
@@ -9,6 +10,7 @@ export class RegistrationData {
   constructor(
     id: number,
     name: string,
+    contactNumber: number,
     password: string,
     address: string,
     city: string,
@@ -16,6 +18,7 @@ export class RegistrationData {
   ) {
     this.id = id;
     this.name = name;
+    this.contactNumber = contactNumber;
     this.password = password;
     this.address = address;
     this.city = city;

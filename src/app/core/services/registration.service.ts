@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RegistrationData } from './registration.model';
+import { RegistrationData } from '../../registration/registration.model';
 
 @Injectable()
 export class RegistrationService {

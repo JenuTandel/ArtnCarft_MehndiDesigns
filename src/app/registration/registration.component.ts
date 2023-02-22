@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { RegistrationData } from './registration.model';
-import { RegistrationService } from './registration.service';
+import { RegistrationService } from '../core/services/registration.service';
 
 @Component({
   selector: 'app-registration',
@@ -44,7 +44,7 @@ export class RegistrationComponent implements OnInit {
       this.isSubmitted = true;
       this.registrationService
         .AddUser(this.registrationForm.value)
-        .subscribe(() => {});
+        .subscribe((res: RegistrationData) => {});
     }
 
     this.router.navigateByUrl('login');

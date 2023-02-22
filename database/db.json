@@ -17,6 +17,15 @@
       "city": "",
       "pincode": "",
       "id": 2
+    },
+    {
+      "name": "Jinal",
+      "password": "12345678",
+      "contactNumber": "7878989878",
+      "address": "Kosamba",
+      "city": "Valsad",
+      "pincode": "396001",
+      "id": 3
     }
   ],
   "artncraftCategory": [

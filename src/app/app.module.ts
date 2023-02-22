@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationService } from './core/services/registration.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutUsComponent,
     ContactUsComponent,
   ],
-  providers: [],
+  providers: [RegistrationService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,

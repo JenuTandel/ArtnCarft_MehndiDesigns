@@ -9,22 +9,96 @@
     >
       <span></span>
     </div>
-    <form class="d-flex flex-column align-items-center">
+    <form [formGroup]="loginForm" class="d-flex flex-column">
       <input
         type="text"
-        class="form-control mb-5"
-        id="exampleFormControlInput1"
+        class="form-control"
+        id="contactno"
         placeholder="Username or Mobile No."
+        formControlName="contactNumber"
+        [ngClass]="{
+          'is-invalid':
+            loginForm.controls['contactNumber'].invalid &&
+            (isSubmitted ||
+              loginForm.controls['contactNumber'].touched ||
+              loginForm.controls['contactNumber'].dirty),
+          'is-valid':
+            loginForm.controls['contactNumber'].valid &&
+            (isSubmitted ||
+              loginForm.controls['contactNumber'].touched ||
+              loginForm.controls['contactNumber'].dirty)
+        }"
       />
+      <div
+        *ngIf="
+          loginForm.controls['contactNumber'].invalid &&
+          (isSubmitted ||
+            loginForm.controls['contactNumber'].touched ||
+            loginForm.controls['contactNumber'].dirty)
+        "
+      >
+        <span
+          class="error text-danger"
+          *ngIf="loginForm.controls['contactNumber'].errors?.['required']"
+          >Enter your contact number</span
+        >
+        <span
+          class="error text-danger"
+          *ngIf="loginForm.controls['contactNumber'].errors?.['pattern']"
+          >Enter Valid Contact Number</span
+        >
+      </div>
       <input
         type="password"
-        class="form-control mb-5"
-        id="exampleFormControlInput1"
+        class="form-control mt-5"
+        id="password"
         placeholder="Password"
+        formControlName="password"
+        [ngClass]="{
+          'is-invalid':
+            loginForm.controls['password'].invalid &&
+            (isSubmitted ||
+              loginForm.controls['password'].touched ||
+              loginForm.controls['password'].dirty),
+          'is-valid':
+            loginForm.controls['password'].valid &&
+            (isSubmitted ||
+              loginForm.controls['password'].touched ||
+              loginForm.controls['password'].dirty)
+        }"
       />
-      <button type="button" class="btn btn-warning text-white">Login</button>
-      <p class="mt-3">Not Registered???</p>
-      <a href="" class="mt-2 text-danger">Click Here</a>
+      <div
+        *ngIf="
+          loginForm.controls['password'].invalid &&
+          (isSubmitted ||
+            loginForm.controls['password'].touched ||
+            loginForm.controls['password'].dirty)
+        "
+      >
+        <span
+          class="error text-danger"
+          *ngIf="loginForm.controls['password'].errors?.['required']"
+          >Enter your password</span
+        >
+        <span
+          class="error text-danger"
+          *ngIf="loginForm.controls['password'].errors?.['pattern']"
+          >Password should have 8 characters</span
+        >
+      </div>
+      <div class="text-center mt-5">
+        <button
+          type="button"
+          class="btn btn-warning text-white"
+          (click)="onLogin()"
+        >
+          Login
+        </button>
+        <p class="mt-3">Not Registered???</p>
+        <a class="mt-2 text-danger" [routerLink]="['/registration']"
+          >Click Here</a
+        >
+      </div>
     </form>
   </div>
 </div>
