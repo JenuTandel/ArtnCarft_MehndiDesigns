@@ -10,6 +10,7 @@ import { MehndiDesignsDetailsPresentationComponent } from './mehndi-designs-deta
 import { MehndiBookingFormContainerComponent } from './mehndi-booking-form-container/mehndi-booking-form-container.component';
 import { MehndiBookingFormPresentationComponent } from './mehndi-booking-form-container/mehndi-booking-form-presentation/mehndi-booking-form-presentation.component';
 import { SharedModule } from '../shared/shared.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,11 @@ import { SharedModule } from '../shared/shared.module';
     MehndiBookingFormContainerComponent,
     MehndiBookingFormPresentationComponent,
   ],
-  imports: [CommonModule, MehndiDesignsRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    MehndiDesignsRoutingModule,
+    SharedModule,
+    InfiniteScrollModule,
+  ],
 })
 export class MehndiDesignsModule {}

@@ -1,1 +1,5 @@
-<app-mehndi-designs-category-presentation></app-mehndi-designs-category-presentation>
+<app-mehndi-designs-category-presentation
+  [mehndiDesignsDataResponse]="mehndiDesignsData$ | async"
+  (getmehndiDesignsData)="getmehndiDesignsData($event)"
+>
+</app-mehndi-designs-category-presentation>
