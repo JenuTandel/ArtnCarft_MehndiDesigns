@@ -8,6 +8,9 @@ import { ArtNCraftCategoryPresentationComponent } from './art-n-craft-category-c
 import { ProductDetailsContainerComponent } from './product-details-container/product-details-container.component';
 import { ProductDetailsPresentationComponent } from './product-details-container/product-details-presentation/product-details-presentation.component';
 import { SharedModule } from '../shared/shared.module';
+import { ArtNCraftService } from './services/art-n-craft.service';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,13 @@ import { SharedModule } from '../shared/shared.module';
     ProductDetailsContainerComponent,
     ProductDetailsPresentationComponent,
   ],
-  imports: [CommonModule, ArtNCraftRoutingModule, SharedModule],
+  imports: [
+    CommonModule,
+    ArtNCraftRoutingModule,
+    SharedModule,
+    InfiniteScrollModule,
+    HttpClientModule,
+  ],
+  providers: [ArtNCraftService],
 })
 export class ArtNCraftModule {}
