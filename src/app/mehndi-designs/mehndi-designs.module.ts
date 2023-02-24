@@ -9,7 +9,7 @@ import { MehndiDesignsDetailsContainerComponent } from './mehndi-designs-details
 import { MehndiDesignsDetailsPresentationComponent } from './mehndi-designs-details-container/mehndi-designs-details-presentation/mehndi-designs-details-presentation.component';
 import { MehndiBookingFormContainerComponent } from './mehndi-booking-form-container/mehndi-booking-form-container.component';
 import { MehndiBookingFormPresentationComponent } from './mehndi-booking-form-container/mehndi-booking-form-presentation/mehndi-booking-form-presentation.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +19,8 @@ import { MehndiBookingFormPresentationComponent } from './mehndi-booking-form-co
     MehndiDesignsDetailsContainerComponent,
     MehndiDesignsDetailsPresentationComponent,
     MehndiBookingFormContainerComponent,
-    MehndiBookingFormPresentationComponent
+    MehndiBookingFormPresentationComponent,
   ],
-  imports: [
-    CommonModule,
-    MehndiDesignsRoutingModule
-  ]
+  imports: [CommonModule, MehndiDesignsRoutingModule, SharedModule],
 })
-export class MehndiDesignsModule { }
+export class MehndiDesignsModule {}
