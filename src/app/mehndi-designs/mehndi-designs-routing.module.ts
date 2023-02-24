@@ -15,7 +15,7 @@ const routes: Routes = [
     component: MehndiDesignsCategoryContainerComponent,
   },
   {
-    path: 'mehndi-details',
+    path: 'mehndi-details/:categoryname',
     component: MehndiDesignsDetailsContainerComponent,
   },
 ];

@@ -15,7 +15,7 @@ const routes: Routes = [
     component: ArtNCraftCategoryContainerComponent,
   },
   {
-    path: 'art-n-craft-product-details',
+    path: 'art-n-craft-product-details/:categoryname',
     component: ProductDetailsContainerComponent,
   },
 ];

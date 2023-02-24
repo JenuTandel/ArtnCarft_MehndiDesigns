@@ -1,4 +1,4 @@
-<div class="card mb-4">
+<div class="card mb-4" (click)="onCard(data.id, data.categoryName)">
   <div class="card-image m-4">
     <img [src]="'./assets/database/images/' + data.categoryimgpath" />
   </div>
