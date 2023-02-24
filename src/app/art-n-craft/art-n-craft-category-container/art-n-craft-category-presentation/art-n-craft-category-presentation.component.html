@@ -7,7 +7,10 @@
     [infiniteScrollDistance]="distance"
     (scrolled)="onScroll($event)"
   >
-    <div class="col-3" *ngFor="let item of artncraftDataResponse">
+    <div
+      class="col-3 d-flex justify-content-center"
+      *ngFor="let item of artncraftDataResponse"
+    >
       <app-card [data]="item"></app-card>
     </div>
   </div>
