@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ArtNCraftService } from './services/art-n-craft.service';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailsPresenterService } from './product-details-container/product-details-presenter/product-details-presenter.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,6 @@ import { HttpClientModule } from '@angular/common/http';
     InfiniteScrollModule,
     HttpClientModule,
   ],
-  providers: [ArtNCraftService],
+  providers: [ArtNCraftService, ProductDetailsPresenterService],
 })
 export class ArtNCraftModule {}

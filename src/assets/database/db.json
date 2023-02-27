@@ -155,75 +155,75 @@
   "birthdayCards": [
     {
       "id": 1,
-      "birthdayCardName": "Green Birthday card",
+      "productName": "Green Birthday card",
       "price": 100,
-      "birthdayCardImgpath": "birthday4.webp"
+      "productImgpath": "birthday4.webp"
     },
     {
       "id": 2,
-      "birthdayCardName": "Pink flower Birthday card",
+      "productName": "Pink flower Birthday card",
       "price": 150,
-      "birthdayCardImgpath": "birthdaycard1.jpg"
+      "productImgpath": "birthdaycard1.jpg"
     },
     {
       "id": 3,
-      "birthdayCardName": "Quilling Birthday card",
+      "productName": "Quilling Birthday card",
       "price": 200,
-      "birthdayCardImgpath": "birthday3.jpg"
+      "productImgpath": "birthday3.jpg"
     },
     {
       "id": 4,
-      "birthdayCardName": "Butterfly Birthday card",
+      "productName": "Butterfly Birthday card",
       "price": 500,
-      "birthdayCardImgpath": "birthday2.jpeg"
+      "productImgpath": "birthday2.jpeg"
     },
     {
       "id": 5,
-      "birthdayCardName": "Green Birthday card",
+      "productName": "Green Birthday card",
       "price": 100,
-      "birthdayCardImgpath": "birthday4.webp"
+      "productImgpath": "birthday4.webp"
     },
     {
       "id": 6,
-      "birthdayCardName": "Pink flower Birthday card",
+      "productName": "Pink flower Birthday card",
       "price": 150,
-      "birthdayCardImgpath": "birthdaycard1.jpg"
+      "productImgpath": "birthdaycard1.jpg"
     },
     {
       "id": 7,
-      "birthdayCardName": "Quilling Birthday card",
+      "productName": "Quilling Birthday card",
       "price": 200,
-      "birthdayCardImgpath": "birthday3.jpg"
+      "productImgpath": "birthday3.jpg"
     },
     {
       "id": 8,
-      "birthdayCardName": "Butterfly Birthday card",
+      "productName": "Butterfly Birthday card",
       "price": 500,
-      "birthdayCardImgpath": "birthday2.jpeg"
+      "productImgpath": "birthday2.jpeg"
     },
     {
       "id": 9,
-      "birthdayCardName": "Green Birthday card",
+      "productName": "Green Birthday card",
       "price": 100,
-      "birthdayCardImgpath": "birthday4.webp"
+      "productImgpath": "birthday4.webp"
     },
     {
       "id": 10,
-      "birthdayCardName": "Pink flower Birthday card",
+      "productName": "Pink flower Birthday card",
       "price": 150,
-      "birthdayCardImgpath": "birthdaycard1.jpg"
+      "productImgpath": "birthdaycard1.jpg"
     },
     {
       "id": 11,
-      "birthdayCardName": "Quilling Birthday card",
+      "productName": "Quilling Birthday card",
       "price": 200,
-      "birthdayCardImgpath": "birthday3.jpg"
+      "productImgpath": "birthday3.jpg"
     },
     {
       "id": 12,
-      "birthdayCardName": "Butterfly Birthday card",
+      "productName": "Butterfly Birthday card",
       "price": 500,
-      "birthdayCardImgpath": "birthday2.jpeg"
+      "productImgpath": "birthday2.jpeg"
     }
   ],
   "bridalMehndiDesigns": [

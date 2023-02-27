@@ -1,1 +1,4 @@
-<p>product-details-container works!</p>
+<app-product-details-presentation
+  [birthdayCardsResponse]="birthdayCardsData$ | async"
+  (getBirthdayCards)="getBirthdayCards($event)"
+></app-product-details-presentation>

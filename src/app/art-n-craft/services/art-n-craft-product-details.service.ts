@@ -1,9 +1,26 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Pagination } from 'src/app/shared/models/pagination.model';
+import { environment } from 'src/environments/environment.development';
+import { artNcraftProductDetails } from '../models/art-n-craft-product-details.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ArtNCraftProductDetailsService {
+  public baseUrl: string = environment.baseUrl;
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getBirthdayCards(page: Pagination): Observable<artNcraftProductDetails[]> {
+    return this.http.get<artNcraftProductDetails[]>(
+      `${this.baseUrl}birthdayCards?_page=${page.pageNumber}&_limit=${page.pageSize}`
+    );
+  }
+
+  getGiftBox(page: Pagination): Observable<artNcraftProductDetails[]> {
+    return this.http.get<artNcraftProductDetails[]>(
+      `${this.baseUrl}bridalMehndiDesigns?_page=${page.pageNumber}&_limit=${page.pageSize}`
+    );
+  }
 }
