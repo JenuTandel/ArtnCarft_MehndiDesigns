@@ -10,6 +10,8 @@ import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationService } from './core/services/registration.service';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ArtNCraftService } from './art-n-craft/services/art-n-craft.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { RegistrationService } from './core/services/registration.service';
     AboutUsComponent,
     ContactUsComponent,
   ],
-  providers: [RegistrationService],
+  providers: [RegistrationService, ArtNCraftService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
