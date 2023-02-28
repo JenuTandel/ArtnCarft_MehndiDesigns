@@ -1,0 +1,13 @@
+.booking-form {
+    width: 590px;
+
+    input {
+        margin-bottom: 60px;
+
+        &::placeholder {
+            font-size: 24px;
+            font-weight: 200;
+            color: $gray-400;
+        }
+    }
+}

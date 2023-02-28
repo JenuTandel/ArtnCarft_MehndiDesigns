@@ -27,7 +27,7 @@
     <div class="card-text mt-1 d-flex flex-column">
       <span>{{ productData.productName }}</span>
       <span *ngIf="mehndi">{{ productData.mehndiName }}</span>
-      <span class="price">{{ productData.price }}</span>
+      <span class="price">{{ productData.price }} Rs.</span>
     </div>
     <span
       class="icon text-danger"
@@ -35,9 +35,10 @@
       (click)="onFavourite()"
       [ngClass]="isLike == false ? 'icon-favorite' : 'icon-heart-solid'"
     ></span>
-    <span class="text-success fw-bold" *ngIf="mehndi">Book Now</span>
+    <span class="text-success fw-bold" *ngIf="mehndi" (click)="onBook()"
+      >Book Now</span
+    >
     <span class="icon icon-bucket-solid text-success d-none"></span>
   </div>
 </div>
 <!-- end: detailed card -->
-

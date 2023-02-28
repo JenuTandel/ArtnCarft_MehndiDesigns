@@ -8,6 +8,8 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { OverlayService } from 'src/app/core/services/overlay.service';
+import { MehndiBookingFormContainerComponent } from 'src/app/mehndi-designs/mehndi-booking-form-container/mehndi-booking-form-container.component';
 
 @Component({
   selector: 'app-card',
@@ -21,7 +23,11 @@ export class CardComponent implements OnInit {
   public get?: boolean;
   public mehndi?: boolean;
   public isLike: boolean;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private overlayService: OverlayService
+  ) {
     this.data = {};
     this.productData = {};
     this.get = false;
@@ -39,6 +45,9 @@ export class CardComponent implements OnInit {
   }
   onFavourite() {
     this.isLike = !this.isLike;
+  }
+  onBook() {
+    this.overlayService.openDialog(MehndiBookingFormContainerComponent);
   }
   onCard(id: number, categoryName: string) {
     this.get = true;

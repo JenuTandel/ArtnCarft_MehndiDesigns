@@ -1,1 +1,13 @@
-<p>mehndi-booking-form-presentation works!</p>
+<form
+  [formGroup]="bookingForm"
+  class="booking-form py-4 px-5 bg-white border border-2 border-dark rounded-5 position-absolute start-50 top-50 translate-middle"
+>
+  <h3 class="text-center mb-5">Booking Form</h3>
+  <input type="text" placeholder="Enter your name" class="form-control" />
+  <input type="text" placeholder="Address" class="form-control" />
+  <input type="text" placeholder="Contact Number" class="form-control" />
+  <input type="date" placeholder="Select the Date" class="form-control" />
+  <div class="text-center">
+    <button type="submit" class="btn btn-warning">Book Now</button>
+  </div>
+</form>

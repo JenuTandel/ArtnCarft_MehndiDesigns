@@ -11,6 +11,7 @@ import { MehndiBookingFormContainerComponent } from './mehndi-booking-form-conta
 import { MehndiBookingFormPresentationComponent } from './mehndi-booking-form-container/mehndi-booking-form-presentation/mehndi-booking-form-presentation.component';
 import { SharedModule } from '../shared/shared.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MehndiDesignsRoutingModule,
     SharedModule,
     InfiniteScrollModule,
+    ReactiveFormsModule,
   ],
 })
 export class MehndiDesignsModule {}
