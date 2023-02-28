@@ -1,6 +1,6 @@
 <div class="row bg-secondary h-100 align-items-center">
   <div class="col-6 h-100 d-flex flex-column">
-    <div class="art-n-craft p-4 flex-grow-1 bg-white">
+    <div class="art-n-craft p-4 d-flex flex-grow-1 bg-white">
       <div id="carouselartncraft" class="carousel slide">
         <div class="carousel-indicators">
           <button
@@ -30,31 +30,31 @@
             aria-label="Slide 4"
           ></button>
         </div>
-        <div class="carousel-inner h-100">
+        <div class="carousel-inner flex-grow-1">
           <div class="carousel-item active">
             <img
-              src="https://picsum.photos/id/984/900/500"
+              [src]="'./assets/database/images/' + artNcraftImg[0]"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://picsum.photos/id/1011/900/500"
+              [src]="'./assets/database/images/' + artNcraftImg[1]"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://picsum.photos/id/944/900/500"
+              [src]="'./assets/database/images/' + artNcraftImg[2]"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://picsum.photos/id/944/900/500"
+              [src]="'./assets/database/images/' + artNcraftImg[3]"
               class="d-block"
               alt="..."
             />
@@ -118,28 +118,28 @@
         <div class="carousel-inner h-100">
           <div class="carousel-item active">
             <img
-              src="https://picsum.photos/id/984/900/500"
-              class="d-block"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item active">
-            <img
-              src="https://picsum.photos/id/984/900/500"
+              [src]="'./assets/database/images/' + mehndiImg[0]"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://picsum.photos/id/1011/900/500"
+              [src]="'./assets/database/images/' + mehndiImg[1]"
               class="d-block"
               alt="..."
             />
           </div>
           <div class="carousel-item">
             <img
-              src="https://picsum.photos/id/944/900/500"
+              [src]="'./assets/database/images/' + mehndiImg[2]"
+              class="d-block"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              [src]="'./assets/database/images/' + mehndiImg[3]"
               class="d-block"
               alt="..."
             />

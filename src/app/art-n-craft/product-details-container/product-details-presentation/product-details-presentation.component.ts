@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pagination } from 'src/app/shared/models/pagination.model';
 import { artNcraftProductDetails } from '../../models/art-n-craft-product-details.model';
@@ -14,7 +15,6 @@ export class ProductDetailsPresentationComponent implements OnInit {
     birthdayCardsResponse: artNcraftProductDetails[] | null
   ) {
     if (birthdayCardsResponse) {
-      this.title = 'Birthday Cards';
       this._birthdayCardsResponse = this._birthdayCardsResponse.concat(
         birthdayCardsResponse
       );
@@ -30,7 +30,10 @@ export class ProductDetailsPresentationComponent implements OnInit {
   public throttle: number = 0;
   public title: any;
   private _birthdayCardsResponse: artNcraftProductDetails[];
-  constructor(private productDetailPresenter: ProductDetailsPresenterService) {
+  constructor(
+    private productDetailPresenter: ProductDetailsPresenterService,
+    private activatedRoute: ActivatedRoute
+  ) {
     this._birthdayCardsResponse = [];
     this.getBirthdayCards = new EventEmitter<Pagination>();
     this.tableProperty = new Pagination(1, 8);
@@ -40,6 +43,8 @@ export class ProductDetailsPresentationComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getBirthdayCards.emit(this.tableProperty);
+    this.title = this.activatedRoute.snapshot.params['categoryname'];
+    this.title = this.title.match(/[A-Z][a-z]+|[0-9]+/g).join(' ');
   }
   onScroll() {
     this.tableProperty.pageNumber++;

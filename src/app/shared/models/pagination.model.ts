@@ -1,9 +1,9 @@
 export class Pagination {
-  public pageSize!: number;
   public pageNumber!: number;
+  public pageSize!: number;
 
-  constructor(pageSize: number, pageNumber: number) {
-    this.pageSize = pageSize;
+  constructor(pageNumber: number, pageSize: number) {
     this.pageNumber = pageNumber;
+    this.pageSize = pageSize;
   }
 }
