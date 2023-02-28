@@ -8,8 +8,19 @@
 }
 
 .carousel-indicators {
-    margin-bottom: -1rem;
+    margin-bottom: -25px;
 }
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: flex;
+}
+
+// .carousel-control-prev-icon {
+//     background-image: url('./../../images/chevron-left-solid.svg');
+// }
+
 
 .form-control {
     border: 0;

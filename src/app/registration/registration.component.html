@@ -7,21 +7,21 @@
   <div class="steps d-flex justify-content-around w-100 mb-4 position-relative">
     <div
       class="step-bullet d-flex align-items-center justify-content-center rounded-circle border border-3 border-white"
-      [ngClass]="step >= 1 ? 'active' : 'inactive'"
+      [ngClass]="step >= 1 ? 'active-step' : 'inactive'"
       (click)="onStepBullet(1)"
     >
       <span>1</span>
     </div>
     <div
       class="step-bullet d-flex align-items-center justify-content-center rounded-circle border border-3 border-white"
-      [ngClass]="step >= 2 ? 'active' : 'inactive'"
+      [ngClass]="step >= 2 ? 'active-step' : 'inactive'"
       (click)="onStepBullet(2)"
     >
       <span>2</span>
     </div>
     <div
       class="step-bullet d-flex align-items-center justify-content-center rounded-circle border border-3 border-white"
-      [ngClass]="step == 3 ? 'active' : 'inactive'"
+      [ngClass]="step == 3 ? 'active-step' : 'inactive'"
       (click)="onStepBullet(3)"
     >
       <span>3</span>

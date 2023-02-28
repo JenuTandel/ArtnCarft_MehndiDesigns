@@ -1,10 +1,14 @@
 .title {
     border-top: 3px solid $primary;
+    cursor: pointer;
 }
 
 .carousel-item {
+    height: 580px;
+
     img {
         max-width: 100%;
+        max-height: 100%;
         object-fit: cover;
     }
 }

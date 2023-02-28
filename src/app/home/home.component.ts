@@ -27,9 +27,6 @@ export class HomeComponent implements OnInit {
         res = res.slice(0, 4);
         this.artNcraftImg = res.map((item) => item.categoryimgpath);
       });
-    setTimeout(() => {
-      console.log(this.artNcraftImg);
-    }, 4000);
 
     this.mehndiService
       .getMehndiDesignsData(this.tableProperty)
@@ -37,8 +34,5 @@ export class HomeComponent implements OnInit {
         res = res.slice(0, 4);
         this.mehndiImg = res.map((item) => item.categoryimgpath);
       });
-    setTimeout(() => {
-      console.log(this.mehndiImg);
-    }, 4000);
   }
 }
