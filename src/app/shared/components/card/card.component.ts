@@ -39,8 +39,6 @@ export class CardComponent implements OnInit {
   }
   onFavourite() {
     this.isLike = !this.isLike;
-    console.log(this.isLike);
-    console.log(this.productData);
   }
   onCard(id: number, categoryName: string) {
     this.get = true;
@@ -50,23 +48,26 @@ export class CardComponent implements OnInit {
       this.router.navigateByUrl(
         'art-n-craft/art-n-craft-product-details/' + categoryName
       );
-    }
-    if (id == 2 && categoryName == 'Gift Box') {
+    } else if (id == 2 && categoryName == 'Gift Box') {
       let a = categoryName.split(' ');
       categoryName = a[0] + a[1];
       this.router.navigateByUrl(
         'art-n-craft/art-n-craft-product-details/' + categoryName
       );
-    }
-    if (id == 1 && categoryName == 'Simple Designs') {
+    } else if (id == 1 && categoryName == 'Simple Designs') {
       let abc = categoryName.split(' ');
       categoryName = abc[0] + abc[1];
       this.router.navigateByUrl(
         'mehndi-designs/mehndi-details/' + categoryName
       );
+    } else if (id == 2 && categoryName == 'Bridal Mehndi Designs') {
+      let abc = categoryName.split(' ');
+      categoryName = abc[0] + abc[1];
+      this.router.navigateByUrl(
+        'mehndi-designs/mehndi-details/' + categoryName
+      );
+    } else {
+      this.router.navigateByUrl('home');
     }
-    // if (this.get == true) {
-    //   this.get = false;
-    // }
   }
 }

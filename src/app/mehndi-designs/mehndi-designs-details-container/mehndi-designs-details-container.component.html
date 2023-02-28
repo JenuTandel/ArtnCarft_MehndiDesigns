@@ -1,1 +1,4 @@
-<p>mehndi-designs-details-container works!</p>
+<app-mehndi-designs-details-presentation
+  [DesignDetailsResponse]="mehndiDetails$ | async"
+  (getBridalMehndiDesigns)="getBridalMehndiDesigns($event)"
+></app-mehndi-designs-details-presentation>

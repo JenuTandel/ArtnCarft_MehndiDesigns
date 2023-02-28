@@ -229,75 +229,149 @@
   "bridalMehndiDesigns": [
     {
       "id": 1,
-      "mehndiName": "Bridal mehndi with 4 figure",
+      "mehndiName": "Bridal mehndi 4 figure",
       "price": 7000,
-      "img": "br2.jpg"
+      "mehndiImgpath": "br2.jpg"
     },
     {
       "id": 2,
       "mehndiName": "Simple without figure",
       "price": 4000,
-      "img": "a.webp"
+      "mehndiImgpath": "a.webp"
     },
     {
       "id": 3,
       "mehndiName": "Bridal mehndi 3 figure",
       "price": 6000,
-      "img": "br4.jpg"
+      "mehndiImgpath": "br4.jpg"
     },
     {
       "id": 4,
       "mehndiName": "Bridal mehndi 8 figure",
       "price": 10000,
-      "img": "br3.jpg"
+      "mehndiImgpath": "br3.jpg"
     },
     {
       "id": 5,
-      "mehndiName": "Bridal mehndi with 4 figure",
+      "mehndiName": "Bridal mehndi 4 figure",
       "price": 7000,
-      "img": "br2.jpg"
+      "mehndiImgpath": "br2.jpg"
     },
     {
       "id": 6,
       "mehndiName": "Simple without figure",
       "price": 4000,
-      "img": "a.webp"
+      "mehndiImgpath": "a.webp"
     },
     {
       "id": 7,
       "mehndiName": "Bridal mehndi 3 figure",
       "price": 6000,
-      "img": "br4.jpg"
+      "mehndiImgpath": "br4.jpg"
     },
     {
       "id": 8,
       "mehndiName": "Bridal mehndi 8 figure",
       "price": 10000,
-      "img": "br3.jpg"
+      "mehndiImgpath": "br3.jpg"
     },
     {
       "id": 9,
-      "mehndiName": "Bridal mehndi with 4 figure",
+      "mehndiName": "Bridal mehndi 4 figure",
       "price": 7000,
-      "img": "br2.jpg"
+      "mehndiImgpath": "br2.jpg"
     },
     {
       "id": 10,
       "mehndiName": "Simple without figure",
       "price": 4000,
-      "img": "a.webp"
+      "mehndiImgpath": "a.webp"
     },
     {
       "id": 11,
       "mehndiName": "Bridal mehndi 3 figure",
       "price": 6000,
-      "img": "br4.jpg"
+      "mehndiImgpath": "br4.jpg"
     },
     {
       "id": 12,
       "mehndiName": "Bridal mehndi 8 figure",
       "price": 10000,
-      "img": "br3.jpg"
+      "mehndiImgpath": "br3.jpg"
+    }
+  ],
+  "simpleMehndiDesigns": [
+    {
+      "id": 1,
+      "mehndiName": "simple rounded",
+      "price": 200,
+      "mehndiImgpath": "sm1.jpg"
+    },
+    {
+      "id": 2,
+      "mehndiName": "Flower n Leaf",
+      "price": 400,
+      "mehndiImgpath": "sm2.jpg"
+    },
+    {
+      "id": 3,
+      "mehndiName": "like a bracelet",
+      "price": 300,
+      "mehndiImgpath": "sm3.jpg"
+    },
+    {
+      "id": 4,
+      "mehndiName": "simple flower",
+      "price": 100,
+      "mehndiImgpath": "sm4.jpg"
+    },
+    {
+      "id": 5,
+      "mehndiName": "simple rounded",
+      "price": 200,
+      "mehndiImgpath": "sm1.jpg"
+    },
+    {
+      "id": 6,
+      "mehndiName": "Flower n Leaf",
+      "price": 400,
+      "mehndiImgpath": "sm2.jpg"
+    },
+    {
+      "id": 7,
+      "mehndiName": "like a bracelet",
+      "price": 300,
+      "mehndiImgpath": "sm3.jpg"
+    },
+    {
+      "id": 8,
+      "mehndiName": "simple flower",
+      "price": 100,
+      "mehndiImgpath": "sm4.jpg"
+    },
+    {
+      "id": 9,
+      "mehndiName": "simple rounded",
+      "price": 200,
+      "mehndiImgpath": "sm1.jpg"
+    },
+    {
+      "id": 10,
+      "mehndiName": "Flower n Leaf",
+      "price": 400,
+      "mehndiImgpath": "sm2.jpg"
+    },
+    {
+      "id": 11,
+      "mehndiName": "like a bracelet",
+      "price": 300,
+      "mehndiImgpath": "sm3.jpg"
+    },
+    {
+      "id": 12,
+      "mehndiName": "simple flower",
+      "price": 100,
+      "mehndiImgpath": "sm4.jpg"
     }
   ]
 }
