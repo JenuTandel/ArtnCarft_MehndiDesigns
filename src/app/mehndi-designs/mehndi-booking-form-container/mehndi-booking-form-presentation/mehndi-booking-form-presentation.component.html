@@ -1,13 +1,138 @@
 <form
   [formGroup]="bookingForm"
+  (ngSubmit)="onBookNow()"
   class="booking-form py-4 px-5 bg-white border border-2 border-dark rounded-5 position-absolute start-50 top-50 translate-middle"
 >
-  <h3 class="text-center mb-5">Booking Form</h3>
-  <input type="text" placeholder="Enter your name" class="form-control" />
-  <input type="text" placeholder="Address" class="form-control" />
-  <input type="text" placeholder="Contact Number" class="form-control" />
-  <input type="date" placeholder="Select the Date" class="form-control" />
-  <div class="text-center">
+  <h3 class="text-center">Booking Form</h3>
+  <input
+    type="text"
+    placeholder="Enter your name"
+    formControlName="name"
+    class="form-control"
+    [ngClass]="{
+      'is-invalid':
+        bookingForm.controls['name'].invalid &&
+        (isSubmitted ||
+          bookingForm.controls['name'].touched ||
+          bookingForm.controls['name'].dirty),
+      'is-valid':
+        bookingForm.controls['name'].valid &&
+        (isSubmitted ||
+          bookingForm.controls['name'].touched ||
+          bookingForm.controls['name'].dirty)
+    }"
+  />
+  <div
+    *ngIf="
+      bookingForm.controls['name'].invalid &&
+      (isSubmitted ||
+        bookingForm.controls['name'].touched ||
+        bookingForm.controls['name'].dirty)
+    "
+  >
+    <span
+      class="error text-danger"
+      *ngIf="bookingForm.controls['name'].errors?.['required']"
+      >Enter your name</span
+    >
+  </div>
+  <input
+    type="text"
+    placeholder="Address"
+    formControlName="address"
+    class="form-control"
+    [ngClass]="{
+      'is-invalid':
+        bookingForm.controls['address'].invalid &&
+        (isSubmitted ||
+          bookingForm.controls['address'].touched ||
+          bookingForm.controls['address'].dirty),
+      'is-valid':
+        bookingForm.controls['address'].valid &&
+        (isSubmitted ||
+          bookingForm.controls['address'].touched ||
+          bookingForm.controls['address'].dirty)
+    }"
+  />
+  <div
+    *ngIf="
+      bookingForm.controls['address'].invalid &&
+      (isSubmitted ||
+        bookingForm.controls['address'].touched ||
+        bookingForm.controls['address'].dirty)
+    "
+  >
+    <span
+      class="error text-danger"
+      *ngIf="bookingForm.controls['address'].errors?.['required']"
+      >Enter your address</span
+    >
+  </div>
+  <input
+    type="text"
+    placeholder="Contact Number"
+    formControlName="contactNumber"
+    class="form-control"
+    [ngClass]="{
+      'is-invalid':
+        bookingForm.controls['contactNumber'].invalid &&
+        (isSubmitted ||
+          bookingForm.controls['contactNumber'].touched ||
+          bookingForm.controls['contactNumber'].dirty),
+      'is-valid':
+        bookingForm.controls['contactNumber'].valid &&
+        (isSubmitted ||
+          bookingForm.controls['contactNumber'].touched ||
+          bookingForm.controls['contactNumber'].dirty)
+    }"
+  />
+  <div
+    *ngIf="
+      bookingForm.controls['contactNumber'].invalid &&
+      (isSubmitted ||
+        bookingForm.controls['contactNumber'].touched ||
+        bookingForm.controls['contactNumber'].dirty)
+    "
+  >
+    <span
+      class="error text-danger"
+      *ngIf="bookingForm.controls['contactNumber'].errors?.['required']"
+      >Enter your contact number</span
+    >
+  </div>
+  <input
+    type="date"
+    placeholder="Select the Date"
+    formControlName="date"
+    class="form-control"
+    [ngClass]="{
+      'is-invalid':
+        bookingForm.controls['date'].invalid &&
+        (isSubmitted ||
+          bookingForm.controls['date'].touched ||
+          bookingForm.controls['date'].dirty),
+      'is-valid':
+        bookingForm.controls['date'].valid &&
+        (isSubmitted ||
+          bookingForm.controls['date'].touched ||
+          bookingForm.controls['date'].dirty)
+    }"
+  />
+  <div
+    *ngIf="
+      bookingForm.controls['date'].invalid &&
+      (isSubmitted ||
+        bookingForm.controls['date'].touched ||
+        bookingForm.controls['date'].dirty)
+    "
+  >
+    <span
+      class="error text-danger"
+      *ngIf="bookingForm.controls['date'].errors?.['required']"
+      >Select the booking date</span
+    >
+  </div>
+  <div class="text-center mt-5">
     <button type="submit" class="btn btn-warning">Book Now</button>
   </div>
 </form>

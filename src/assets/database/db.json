@@ -373,5 +373,35 @@
       "price": 100,
       "mehndiImgpath": "sm4.jpg"
     }
+  ],
+  "mehndiBookingInfo": [
+    {
+      "name": "Jinal Tandel",
+      "address": "Kosamba Pritamnagar",
+      "contactNumber": "09033982833",
+      "date": "2023-03-03",
+      "id": 1
+    },
+    {
+      "name": "Jinal Tandel",
+      "address": "Kosamba Pritamnagar",
+      "contactNumber": "09033982833",
+      "date": "2023-03-05",
+      "id": 2
+    },
+    {
+      "name": "Vishwani Patel",
+      "address": "Dungri, Valsad",
+      "contactNumber": "9904285494",
+      "date": "2023-12-09",
+      "id": 3
+    },
+    {
+      "name": "Vishwani Patel",
+      "address": "Dungri, Valsad",
+      "contactNumber": "09904285494",
+      "date": "2023-03-12",
+      "id": 4
+    }
   ]
 }

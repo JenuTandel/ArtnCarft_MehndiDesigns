@@ -12,6 +12,7 @@ import { MehndiBookingFormPresentationComponent } from './mehndi-booking-form-co
 import { SharedModule } from '../shared/shared.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BookingFormService } from './services/booking-form.service';
 
 @NgModule({
   declarations: [
