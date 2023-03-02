@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegistrationData } from '../registration/registration.model';
 import { RegistrationService } from '../core/services/registration.service';
 import { Router } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +14,12 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
   public isSubmitted: boolean;
+
   constructor(
     private formBuilder: FormBuilder,
     private registrationService: RegistrationService,
-    private router: Router
+    private router: Router,
+    private loginService: LoginService
   ) {
     this.loginForm = new FormGroup('');
     this.isSubmitted = false;
@@ -48,6 +52,7 @@ export class LoginComponent implements OnInit {
 
           if (user) {
             this.router.navigateByUrl('home');
+            this.loginService.islogin.next(true);
           } else {
             alert('Invalid User');
           }

@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
-
-  constructor() { }
+  public islogin$: Observable<boolean>;
+  public islogin: Subject<boolean>;
+  constructor() {
+    this.islogin = new Subject();
+    this.islogin$ = this.islogin.asObservable();
+  }
 }
