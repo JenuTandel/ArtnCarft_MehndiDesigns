@@ -5,11 +5,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { OverlayService } from './services/overlay.service';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, ProfileComponent],
   imports: [CommonModule, NgbModule, RouterModule, OverlayModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, ProfileComponent],
   providers: [OverlayService],
 })
 export class CoreModule {}
