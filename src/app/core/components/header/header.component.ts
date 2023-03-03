@@ -17,9 +17,11 @@ export class HeaderComponent implements OnInit {
     this.isLoggedIn = false;
   }
   ngOnInit(): void {
+    if (localStorage.getItem('userToken')) {
+      this.isLoggedIn = true;
+    }
     this.loginService.islogin$.subscribe((res: boolean) => {
       this.isLoggedIn = res;
-      console.log(this.isLoggedIn);
     });
   }
   onProfile() {

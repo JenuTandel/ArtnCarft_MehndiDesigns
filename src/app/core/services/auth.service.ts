@@ -31,8 +31,8 @@ export class AuthService {
     );
   }
 
-  logout() {
-    localStorage.removeItem('user');
-    this.router.navigateByUrl('login');
-  }
+  // logout() {
+  //   localStorage.clear();
+  //   this.router.navigateByUrl('login');
+  // }
 }
