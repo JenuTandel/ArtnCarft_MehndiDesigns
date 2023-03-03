@@ -6,11 +6,25 @@ import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { OverlayService } from './services/overlay.service';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './guard/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { FakebackendInterceptor } from './interceptor/fakebackend.interceptor';
 
 @NgModule({
   declarations: [HeaderComponent, ProfileComponent],
   imports: [CommonModule, NgbModule, RouterModule, OverlayModule],
   exports: [HeaderComponent, ProfileComponent],
-  providers: [OverlayService],
+  providers: [
+    OverlayService,
+    AuthService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakebackendInterceptor,
+      multi: true,
+    },
+  ],
 })
 export class CoreModule {}

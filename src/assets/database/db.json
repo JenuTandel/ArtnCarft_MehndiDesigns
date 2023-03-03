@@ -26,6 +26,15 @@
       "city": "Valsad",
       "pincode": "396001",
       "id": 3
+    },
+    {
+      "name": "Vishwani Patel",
+      "password": "12345698",
+      "contactNumber": "9904285495",
+      "address": "Dungri, Valsad",
+      "city": "Valsad",
+      "pincode": "396005",
+      "id": 4
     }
   ],
   "artncraftCategory": [
