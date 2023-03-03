@@ -8,6 +8,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthGuard } from 'src/app/core/guard/auth.guard';
 import { OverlayService } from 'src/app/core/services/overlay.service';
 import { MehndiBookingFormContainerComponent } from 'src/app/mehndi-designs/mehndi-booking-form-container/mehndi-booking-form-container.component';
 
@@ -26,7 +27,8 @@ export class CardComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private overlayService: OverlayService
+    private overlayService: OverlayService,
+    private authguard: AuthGuard
   ) {
     this.data = {};
     this.productData = {};
@@ -47,7 +49,12 @@ export class CardComponent implements OnInit {
     this.isLike = !this.isLike;
   }
   onBook() {
-    this.overlayService.openDialog(MehndiBookingFormContainerComponent);
+    const userdata = JSON.parse(localStorage.getItem('userToken')!);
+    if (userdata) {
+      this.overlayService.openDialog(MehndiBookingFormContainerComponent);
+    } else {
+      this.router.navigateByUrl('login');
+    }
   }
   onCard(id: number, categoryName: string) {
     this.get = true;

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../core/guard/auth.guard';
+import { MehndiBookingFormContainerComponent } from './mehndi-booking-form-container/mehndi-booking-form-container.component';
 import { MehndiDesignsCategoryContainerComponent } from './mehndi-designs-category-container/mehndi-designs-category-container.component';
 import { MehndiDesignsDetailsContainerComponent } from './mehndi-designs-details-container/mehndi-designs-details-container.component';
 import { MehndiDesignsComponent } from './mehndi-designs.component';

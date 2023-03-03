@@ -18,7 +18,7 @@ export class FakebackendInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    let testUser = { id: 3, contactNumber: '9898787898', password: '12345678' };
+    let testUser = { id: 3, contactNumber: '7878989878', password: '12345678' };
 
     let currentUserToken = localStorage.getItem('userToken')!;
 
@@ -41,7 +41,6 @@ export class FakebackendInterceptor implements HttpInterceptor {
         };
         return of(new HttpResponse({ status: 200, body }));
       } else {
-        // else return 400 bad request
         return throwError({
           error: { message: 'contactNumber or password is incorrect' },
         });

@@ -35,6 +35,15 @@
       "city": "Valsad",
       "pincode": "396005",
       "id": 4
+    },
+    {
+      "name": "Hetal",
+      "password": "12345678",
+      "contactNumber": "7474050525",
+      "address": "Kosamba Pritamnagar",
+      "city": "Valsad",
+      "pincode": "963001",
+      "id": 5
     }
   ],
   "artncraftCategory": [

@@ -7,6 +7,7 @@ import { Observable, Subject } from 'rxjs';
 import { LoginService } from './login.service';
 import { AuthService } from '../core/services/auth.service';
 import jwt_decode from 'jwt-decode';
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,8 @@ import jwt_decode from 'jwt-decode';
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
   public isSubmitted: boolean;
+  public token: string;
+  private secretkey: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -26,6 +29,8 @@ export class LoginComponent implements OnInit {
   ) {
     this.loginForm = new FormGroup('');
     this.isSubmitted = false;
+    this.secretkey = 'thisismysecretkey';
+    this.token = '';
   }
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -39,37 +44,42 @@ export class LoginComponent implements OnInit {
       ],
     });
   }
+
   DecodeToken(token: string): string {
     return jwt_decode(token);
   }
   onLogin() {
     this.isSubmitted = true;
     if (this.loginForm.valid) {
-      // this.registrationService
-      //   .getUser()
-      //   .subscribe((res: RegistrationData[]) => {
-      //     let user = res.find(
-      //       (data) =>
-      //         data.contactNumber ===
-      //           this.loginForm.controls['contactNumber'].value &&
-      //         data.password === this.loginForm.controls['password'].value
-      //     );
-      //     console.log(user);
+      this.registrationService
+        .getUser()
+        .subscribe((res: RegistrationData[]) => {
+          let user = res.find(
+            (data) =>
+              data.contactNumber ===
+                this.loginForm.controls['contactNumber'].value &&
+              data.password === this.loginForm.controls['password'].value
+          );
+          console.log(user);
 
-      //     if (user) {
-      //       this.router.navigateByUrl('home');
-      //       this.loginService.islogin.next(true);
-      //     } else {
-      //       alert('Invalid User');
-      //     }
-      //   });
-      this.authService.login(this.loginForm.value).subscribe((res: any) => {
-        // const token = this.DecodeToken(res);
-        const token = res.tokenId;
-        localStorage.setItem('userToken', token);
-        this.loginService.islogin.next(true);
-        this.router.navigateByUrl('home');
-      });
+          if (user) {
+            this.auth();
+          } else {
+            alert('Invalid User');
+          }
+        });
     }
+  }
+  async auth() {
+    this.authService.login(this.loginForm.value).subscribe((res: any) => {
+      this.token = CryptoJS.AES.decrypt(res, this.secretkey)
+        .toString(CryptoJS.enc.Utf8)
+        .replace(/['"]+/g, '');
+    });
+    console.log(this.token);
+
+    await localStorage.setItem('user', this.token);
+    await this.loginService.islogin.next(true);
+    await this.router.navigateByUrl('home');
   }
 }

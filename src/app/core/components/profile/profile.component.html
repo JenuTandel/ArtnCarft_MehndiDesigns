@@ -3,23 +3,24 @@
     <li
       class="nav-item d-flex align-items-center justify-content-between px-3 border-bottom border-primary"
     >
-      <a class="nav-link text-primary" href="#">My Profile</a>
+      <a class="nav-link text-primary">My Profile</a>
       <span class="icon icon-person"></span>
     </li>
     <li
       class="nav-item d-flex align-items-center justify-content-between px-3 border-bottom border-primary"
     >
-      <a class="nav-link text-primary" href="#">Wishlist</a>
+      <a class="nav-link text-primary">Wishlist</a>
       <span class="icon icon-favorite text-danger"></span>
     </li>
     <li
       class="nav-item d-flex align-items-center justify-content-between px-3 border-bottom border-primary"
     >
-      <a class="nav-link text-primary" href="#">My Orders</a>
+      <a class="nav-link text-primary">My Orders</a>
       <span class="icon icon-bucket-solid text-primary"></span>
     </li>
     <li
       class="nav-item d-flex align-items-center justify-content-between px-3 border-bottom border-primary"
+      (click)="onLogout()"
     >
       <a class="nav-link text-primary disabled">Logout</a>
       <span class="icon icon-power-off-solid text-danger"></span>
