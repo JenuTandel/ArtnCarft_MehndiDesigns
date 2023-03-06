@@ -5,17 +5,14 @@ import { WishlistRoutingModule } from './wishlist-routing.module';
 import { WishlistComponent } from './wishlist.component';
 import { WishlistContainerComponent } from './wishlist-container/wishlist-container.component';
 import { WishlistPresentationComponent } from './wishlist-container/wishlist-presentation/wishlist-presentation.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     WishlistComponent,
     WishlistContainerComponent,
-    WishlistPresentationComponent
+    WishlistPresentationComponent,
   ],
-  imports: [
-    CommonModule,
-    WishlistRoutingModule
-  ]
+  imports: [CommonModule, WishlistRoutingModule, SharedModule],
 })
-export class WishlistModule { }
+export class WishlistModule {}

@@ -8,6 +8,8 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
+import { ArtNCraftProductDetailsService } from 'src/app/art-n-craft/services/art-n-craft-product-details.service';
 import { AuthGuard } from 'src/app/core/guard/auth.guard';
 import { OverlayService } from 'src/app/core/services/overlay.service';
 import { MehndiBookingFormContainerComponent } from 'src/app/mehndi-designs/mehndi-booking-form-container/mehndi-booking-form-container.component';
@@ -28,7 +30,8 @@ export class CardComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private overlayService: OverlayService,
-    private authguard: AuthGuard
+    private authguard: AuthGuard,
+    private artNCraftProductDetailsService: ArtNCraftProductDetailsService
   ) {
     this.data = {};
     this.productData = {};
@@ -45,8 +48,21 @@ export class CardComponent implements OnInit {
       this.mehndi = true;
     }
   }
-  onFavourite() {
+  onFavourite(data: artNcraftProductDetails) {
     this.isLike = !this.isLike;
+    if (this.isLike == true) {
+      this.artNCraftProductDetailsService
+        .addtoFav(data, data.id)
+        .subscribe((res) => {
+          res.isLike = true;
+          console.log(res);
+        });
+    }
+    // if (this.isLike == true) {
+    //   this.artNCraftProductDetailsService
+    //     .getCardById(id)
+    //     .subscribe((res) => {});
+    // }
   }
   onBook() {
     const userdata = JSON.parse(localStorage.getItem('userToken')!);

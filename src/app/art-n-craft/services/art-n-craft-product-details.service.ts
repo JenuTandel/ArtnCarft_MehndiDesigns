@@ -23,4 +23,26 @@ export class ArtNCraftProductDetailsService {
       `${this.baseUrl}bridalMehndiDesigns?_page=${page.pageNumber}&_limit=${page.pageSize}`
     );
   }
+
+  getCardById(id: number): Observable<artNcraftProductDetails> {
+    return this.http.get<artNcraftProductDetails>(
+      `${this.baseUrl}birthdayCards/${id}`
+    );
+  }
+
+  addtoFav(
+    data: artNcraftProductDetails,
+    id: number
+  ): Observable<artNcraftProductDetails> {
+    return this.http.put<artNcraftProductDetails>(
+      `${this.baseUrl}birthdayCards/${id}`,
+      data
+    );
+  }
+
+  getAllBirthdayCards(): Observable<artNcraftProductDetails> {
+    return this.http.get<artNcraftProductDetails>(
+      `${this.baseUrl}birthdayCards`
+    );
+  }
 }

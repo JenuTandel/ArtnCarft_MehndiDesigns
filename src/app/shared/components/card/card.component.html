@@ -32,7 +32,7 @@
     <span
       class="icon text-danger"
       *ngIf="!mehndi"
-      (click)="onFavourite()"
+      (click)="onFavourite(productData)"
       [ngClass]="isLike == false ? 'icon-favorite' : 'icon-heart-solid'"
     ></span>
     <span class="text-success fw-bold" *ngIf="mehndi" (click)="onBook()"
