@@ -26,6 +26,7 @@ export class AuthService {
         ).toString();
         console.log(userData.tokenId);
         localStorage.setItem('userToken', JSON.stringify(userData.tokenId));
+        localStorage.setItem('user', JSON.stringify(userData));
         return userData.tokenId;
       })
     );

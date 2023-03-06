@@ -2,48 +2,21 @@
   "registrationData": [
     {
       "name": "Jinal Tandel",
-      "password": "123456",
-      "contactNumber": "9033982833",
-      "address": "Kosamba",
+      "password": "12345678",
+      "contactNumber": "9033982933",
+      "address": "Kosamba Pritamnagar",
       "city": "Valsad",
       "pincode": "396001",
       "id": 1
     },
     {
-      "name": "",
-      "password": "",
-      "contactNumber": "",
-      "address": "",
-      "city": "",
-      "pincode": "",
-      "id": 2
-    },
-    {
+      "id": 2,
+      "password": "12345678",
       "name": "Jinal",
-      "password": "12345678",
       "contactNumber": "7878989878",
-      "address": "Kosamba",
-      "city": "Valsad",
-      "pincode": "396001",
-      "id": 3
-    },
-    {
-      "name": "Vishwani Patel",
-      "password": "12345698",
-      "contactNumber": "9904285495",
-      "address": "Dungri, Valsad",
-      "city": "Valsad",
-      "pincode": "396005",
-      "id": 4
-    },
-    {
-      "name": "Hetal",
-      "password": "12345678",
-      "contactNumber": "7474050525",
       "address": "Kosamba Pritamnagar",
       "city": "Valsad",
-      "pincode": "963001",
-      "id": 5
+      "pincode": "396001"
     }
   ],
   "artncraftCategory": [

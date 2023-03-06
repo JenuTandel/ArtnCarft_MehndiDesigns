@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/login/login.service';
+import { DataCommunications } from 'src/app/core/services/datacommunications.service';
 import { OverlayService } from '../../services/overlay.service';
 import { ProfileComponent } from '../profile/profile.component';
 
@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   public isLoggedIn: boolean;
   constructor(
     private overlayService: OverlayService,
-    private loginService: LoginService
+    private dataCommunications: DataCommunications
   ) {
     this.isLoggedIn = false;
   }
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('userToken')) {
       this.isLoggedIn = true;
     }
-    this.loginService.islogin$.subscribe((res: boolean) => {
+    this.dataCommunications.islogin$.subscribe((res: boolean) => {
       this.isLoggedIn = res;
     });
   }

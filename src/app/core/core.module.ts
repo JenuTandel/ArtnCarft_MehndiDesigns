@@ -11,6 +11,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { FakebackendInterceptor } from './interceptor/fakebackend.interceptor';
+import { DataCommunications } from './services/datacommunications.service';
 
 @NgModule({
   declarations: [HeaderComponent, ProfileComponent],
@@ -20,6 +21,7 @@ import { FakebackendInterceptor } from './interceptor/fakebackend.interceptor';
     OverlayService,
     AuthService,
     AuthGuard,
+    DataCommunications,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: FakebackendInterceptor,

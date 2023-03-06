@@ -18,7 +18,7 @@ export class FakebackendInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    let testUser = { id: 3, contactNumber: '7878989878', password: '12345678' };
+    let testUser = { id: 2, contactNumber: '7878989878', password: '12345678' };
 
     let currentUserToken = localStorage.getItem('userToken')!;
 

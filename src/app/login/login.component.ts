@@ -4,7 +4,7 @@ import { RegistrationData } from '../registration/registration.model';
 import { RegistrationService } from '../core/services/registration.service';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { LoginService } from './login.service';
+import { DataCommunications } from '../core/services/datacommunications.service';
 import { AuthService } from '../core/services/auth.service';
 import jwt_decode from 'jwt-decode';
 import * as CryptoJS from 'crypto-js';
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private registrationService: RegistrationService,
     private router: Router,
-    private loginService: LoginService,
+    private loginService: DataCommunications,
     private authService: AuthService
   ) {
     this.loginForm = new FormGroup('');
@@ -78,7 +78,7 @@ export class LoginComponent implements OnInit {
     });
     console.log(this.token);
 
-    await localStorage.setItem('user', this.token);
+    // await localStorage.setItem('user', this.token);
     await this.loginService.islogin.next(true);
     await this.router.navigateByUrl('home');
   }
