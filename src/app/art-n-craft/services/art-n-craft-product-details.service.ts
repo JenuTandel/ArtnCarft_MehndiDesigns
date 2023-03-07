@@ -40,8 +40,8 @@ export class ArtNCraftProductDetailsService {
     );
   }
 
-  getAllBirthdayCards(): Observable<artNcraftProductDetails> {
-    return this.http.get<artNcraftProductDetails>(
+  getAllBirthdayCards(): Observable<artNcraftProductDetails[]> {
+    return this.http.get<artNcraftProductDetails[]>(
       `${this.baseUrl}birthdayCards`
     );
   }

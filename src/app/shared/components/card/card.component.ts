@@ -23,9 +23,11 @@ import { MehndiBookingFormContainerComponent } from 'src/app/mehndi-designs/mehn
 export class CardComponent implements OnInit {
   @Input() data: any;
   @Input() productData: any;
+  @Input() wishlistData: any;
   public get?: boolean;
   public mehndi?: boolean;
   public isLike: boolean;
+  public wishlist?: boolean;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -35,11 +37,16 @@ export class CardComponent implements OnInit {
   ) {
     this.data = {};
     this.productData = {};
+    this.wishlistData = {};
     this.get = false;
     this.isLike = false;
+    this.wishlist = false;
   }
   ngOnInit(): void {
+    console.log(this.activatedRoute);
+
     const url = this.activatedRoute.snapshot.routeConfig?.path?.split('/')[0];
+
     if (url == 'art-n-craft-product-details') {
       this.get = true;
     }
@@ -47,22 +54,18 @@ export class CardComponent implements OnInit {
       this.get = true;
       this.mehndi = true;
     }
+    if (url == '') {
+      this.get = true;
+      this.wishlist = true;
+    }
+    console.log(this.wishlistData);
   }
   onFavourite(data: artNcraftProductDetails) {
     this.isLike = !this.isLike;
-    if (this.isLike == true) {
-      this.artNCraftProductDetailsService
-        .addtoFav(data, data.id)
-        .subscribe((res) => {
-          res.isLike = true;
-          console.log(res);
-        });
-    }
-    // if (this.isLike == true) {
-    //   this.artNCraftProductDetailsService
-    //     .getCardById(id)
-    //     .subscribe((res) => {});
-    // }
+    data.isLike = this.isLike;
+    this.artNCraftProductDetailsService
+      .addtoFav(data, data.id)
+      .subscribe((res) => {});
   }
   onBook() {
     const userdata = JSON.parse(localStorage.getItem('userToken')!);

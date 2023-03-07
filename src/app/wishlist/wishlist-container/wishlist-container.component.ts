@@ -10,7 +10,7 @@ import { Pagination } from 'src/app/shared/models/pagination.model';
 })
 export class WishlistContainerComponent implements OnInit {
   public tableProperty: Pagination;
-  public wishlist: artNcraftProductDetails[];
+  public wishlist: any;
   constructor(
     private artNCraftProductDetailsService: ArtNCraftProductDetailsService
   ) {
@@ -25,9 +25,12 @@ export class WishlistContainerComponent implements OnInit {
     this.artNCraftProductDetailsService
       .getAllBirthdayCards()
       .subscribe((res) => {
-        if (res.isLike == true) {
-          this.wishlist.push(res);
-        }
+        console.log(res);
+        const a = res.filter((data: any) => data.isLike == true);
+        // if (res.isLike == true) {
+        this.wishlist = a;
+        // }
       });
+    console.log(this.wishlist);
   }
 }

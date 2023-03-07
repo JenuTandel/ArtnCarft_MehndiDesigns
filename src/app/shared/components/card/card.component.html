@@ -15,14 +15,19 @@
 
 <!-- start: detailed card -->
 <div class="card mb-4" *ngIf="get == true">
-  <div class="card-image m-4" *ngIf="!mehndi">
+  <div class="card-image m-4" *ngIf="!mehndi && wishlist == false">
     <img [src]="'./assets/database/images/' + productData.productImgpath" />
   </div>
   <div class="card-image m-4" *ngIf="mehndi">
     <img [src]="'./assets/database/images/' + productData.mehndiImgpath" />
   </div>
+  <div class="card-image m-4" *ngIf="wishlist == true">
+    <img [src]="'./assets/database/images/' + wishlistData.productImgpath" />
+  </div>
+  <!-- product -->
   <div
     class="card-body mt-4 d-flex align-items-center justify-content-between px-4 my-auto"
+    *ngIf="wishlist == false"
   >
     <div class="card-text mt-1 d-flex flex-column">
       <span>{{ productData.productName }}</span>
@@ -33,12 +38,27 @@
       class="icon text-danger"
       *ngIf="!mehndi"
       (click)="onFavourite(productData)"
-      [ngClass]="isLike == false ? 'icon-favorite' : 'icon-heart-solid'"
+      [ngClass]="
+        productData.isLike == false || productData.isLike == null
+          ? 'icon-favorite'
+          : 'icon-heart-solid'
+      "
     ></span>
     <span class="text-success fw-bold" *ngIf="mehndi" (click)="onBook()"
       >Book Now</span
     >
     <span class="icon icon-bucket-solid text-success d-none"></span>
+  </div>
+  <!-- wishlist -->
+  <div
+    class="card-body mt-4 d-flex align-items-center justify-content-between px-4 my-auto"
+    *ngIf="wishlist == true"
+  >
+    <div class="card-text mt-1 d-flex flex-column">
+      <span>{{ wishlistData.productName }}</span>
+      <span class="price">{{ wishlistData.price }} Rs.</span>
+    </div>
+    <span class="icon icon-bucket-solid text-success"></span>
   </div>
 </div>
 <!-- end: detailed card -->

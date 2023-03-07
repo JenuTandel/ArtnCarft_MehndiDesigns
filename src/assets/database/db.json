@@ -154,25 +154,29 @@
       "id": 2,
       "productName": "Pink flower Birthday card",
       "price": 150,
-      "productImgpath": "birthdaycard1.jpg"
+      "productImgpath": "birthdaycard1.jpg",
+      "isLike": true
     },
     {
       "id": 3,
       "productName": "Quilling Birthday card",
       "price": 200,
-      "productImgpath": "birthday3.jpg"
+      "productImgpath": "birthday3.jpg",
+      "isLike": false
     },
     {
       "id": 4,
       "productName": "Butterfly Birthday card",
       "price": 500,
-      "productImgpath": "birthday2.jpeg"
+      "productImgpath": "birthday2.jpeg",
+      "isLike": true
     },
     {
       "id": 5,
       "productName": "Green Birthday card",
       "price": 100,
-      "productImgpath": "birthday4.webp"
+      "productImgpath": "birthday4.webp",
+      "isLike": true
     },
     {
       "id": 6,

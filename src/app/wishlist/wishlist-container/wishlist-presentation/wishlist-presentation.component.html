@@ -3,9 +3,9 @@
   <div class="row w-100 gx-0 justify-content-around mb-4">
     <div
       class="col-3 d-flex justify-content-center"
-      *ngIf="let item of wishlistDataResponse"
+      *ngFor="let item of wishlistDataResponse"
     >
-      <app-card [productData]="item"></app-card>
+      <app-card [wishlistData]="item"></app-card>
     </div>
   </div>
 </div>
