@@ -188,7 +188,8 @@
       "id": 7,
       "productName": "Quilling Birthday card",
       "price": 200,
-      "productImgpath": "birthday3.jpg"
+      "productImgpath": "birthday3.jpg",
+      "isLike": true
     },
     {
       "id": 8,

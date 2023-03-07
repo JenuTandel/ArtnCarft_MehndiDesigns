@@ -11,14 +11,14 @@
         <th class="fs-5">Delivery Status</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let item of orders" let i="index">
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>i</td>
+        <td>{{ item.productName }}</td>
+        <td>{{ item.price }}</td>
+        <td>date</td>
+        <td>abc</td>
+        <td>abc</td>
       </tr>
     </tbody>
   </table>

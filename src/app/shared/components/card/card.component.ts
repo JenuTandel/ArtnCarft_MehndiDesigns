@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
 import { ArtNCraftProductDetailsService } from 'src/app/art-n-craft/services/art-n-craft-product-details.service';
 import { AuthGuard } from 'src/app/core/guard/auth.guard';
+import { DataCommunications } from 'src/app/core/services/datacommunications.service';
 import { OverlayService } from 'src/app/core/services/overlay.service';
 import { MehndiBookingFormContainerComponent } from 'src/app/mehndi-designs/mehndi-booking-form-container/mehndi-booking-form-container.component';
 
@@ -32,7 +33,7 @@ export class CardComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private overlayService: OverlayService,
-    private authguard: AuthGuard,
+    private dataCommunications: DataCommunications,
     private artNCraftProductDetailsService: ArtNCraftProductDetailsService
   ) {
     this.data = {};
@@ -104,5 +105,8 @@ export class CardComponent implements OnInit {
     } else {
       this.router.navigateByUrl('home');
     }
+  }
+  onPlaceOrder(productData: any) {
+    this.dataCommunications.wishlistData.next(productData);
   }
 }

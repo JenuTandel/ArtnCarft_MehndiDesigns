@@ -9,8 +9,8 @@ export class DataCommunications {
   public idData$: Observable<Object>;
   public idData: Subject<Object>;
 
-  public wishlistId$: Observable<number>;
-  public wishlistId: Subject<number>;
+  public wishlistData$: Observable<any>;
+  public wishlistData: Subject<any>;
 
   constructor() {
     this.islogin = new Subject();
@@ -19,7 +19,7 @@ export class DataCommunications {
     this.idData = new Subject();
     this.idData$ = this.idData.asObservable();
 
-    this.wishlistId = new Subject();
-    this.wishlistId$ = this.wishlistId.asObservable();
+    this.wishlistData = new Subject();
+    this.wishlistData$ = this.wishlistData.asObservable();
   }
 }

@@ -58,7 +58,10 @@
       <span>{{ wishlistData.productName }}</span>
       <span class="price">{{ wishlistData.price }} Rs.</span>
     </div>
-    <span class="icon icon-bucket-solid text-success"></span>
+    <span
+      class="icon icon-bucket-solid text-success"
+      (click)="onPlaceOrder(wishlistData)"
+    ></span>
   </div>
 </div>
 <!-- end: detailed card -->
