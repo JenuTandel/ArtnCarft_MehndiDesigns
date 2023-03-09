@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?rfwz66");
-  src: url("fonts/icomoon.eot?rfwz66#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?rfwz66") format("truetype"),
-    url("fonts/icomoon.woff?rfwz66") format("woff"),
-    url("fonts/icomoon.svg?rfwz66#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?fanc4g");
+  src: url("fonts/icomoon.eot?fanc4g#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?fanc4g") format("truetype"),
+    url("fonts/icomoon.woff?fanc4g") format("woff"),
+    url("fonts/icomoon.svg?fanc4g#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cart:before {
+  content: "\e90e";
+}
 .icon-magnifying-glass-solid:before {
   content: "\e900";
 }
@@ -67,4 +70,13 @@
 }
 .icon-person:before {
   content: "\e90d";
+}
+.icon-shopping_basket:before {
+  content: "\e90f";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-checkmark:before {
+  content: "\ea10";
 }

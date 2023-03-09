@@ -11,12 +11,12 @@
         <th class="fs-5">Delivery Status</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of orders" let i="index">
+    <tbody *ngFor="let item of orders; let i = index">
       <tr>
-        <td>i</td>
+        <td>{{ i + 1 }}</td>
         <td>{{ item.productName }}</td>
         <td>{{ item.price }}</td>
-        <td>date</td>
+        <td>{{ today | date }}</td>
         <td>abc</td>
         <td>abc</td>
       </tr>

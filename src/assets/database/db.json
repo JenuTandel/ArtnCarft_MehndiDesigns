@@ -176,7 +176,7 @@
       "productName": "Green Birthday card",
       "price": 100,
       "productImgpath": "birthday4.webp",
-      "isLike": true
+      "isLike": false
     },
     {
       "id": 6,

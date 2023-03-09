@@ -14,7 +14,7 @@
 <!-- end: card for categories -->
 
 <!-- start: detailed card -->
-<div class="card mb-4" *ngIf="get == true">
+<div class="card mb-4 position-relative" *ngIf="get == true">
   <div class="card-image m-4" *ngIf="!mehndi && wishlist == false">
     <img [src]="'./assets/database/images/' + productData.productImgpath" />
   </div>
@@ -22,7 +22,10 @@
     <img [src]="'./assets/database/images/' + productData.mehndiImgpath" />
   </div>
   <div class="card-image m-4" *ngIf="wishlist == true">
-    <img [src]="'./assets/database/images/' + wishlistData.productImgpath" />
+    <img
+      [src]="'./assets/database/images/' + wishlistData.productImgpath"
+      class="wishlist-image"
+    />
   </div>
   <!-- product -->
   <div
@@ -50,6 +53,15 @@
     <span class="icon icon-bucket-solid text-success d-none"></span>
   </div>
   <!-- wishlist -->
+  <!-- <span
+    class="icon-cancel text-danger position-absolute"
+    *ngIf="wishlist == true"
+  ></span> -->
+  <img
+    src="./../../../../assets/database/images/cancel.svg"
+    class="icon-cancel"
+    *ngIf="wishlist == true"
+  />
   <div
     class="card-body mt-4 d-flex align-items-center justify-content-between px-4 my-auto"
     *ngIf="wishlist == true"
@@ -59,7 +71,7 @@
       <span class="price">{{ wishlistData.price }} Rs.</span>
     </div>
     <span
-      class="icon icon-bucket-solid text-success"
+      class="icon-cart text-success"
       (click)="onPlaceOrder(wishlistData)"
     ></span>
   </div>

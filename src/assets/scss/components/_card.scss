@@ -13,7 +13,12 @@
             width: 100%;
             object-fit: cover;
         }
+
+        .wishlist-image {
+            border-top-right-radius: 30px;
+        }
     }
+
 
     .card-body {
         border-top: 1px solid #CBD0CF;
@@ -29,6 +34,22 @@
 
         .icon {
             font-size: 40px;
+        }
+
+        .icon-cart {
+            font-size: 30px;
+        }
+    }
+
+    .icon-cancel {
+        top: 5px;
+        right: 5px;
+        height: 30px;
+        position: absolute;
+        opacity: 0.2;
+
+        &:hover {
+            opacity: 0.5;
         }
     }
 }

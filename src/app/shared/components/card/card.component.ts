@@ -44,8 +44,6 @@ export class CardComponent implements OnInit {
     this.wishlist = false;
   }
   ngOnInit(): void {
-    console.log(this.activatedRoute);
-
     const url = this.activatedRoute.snapshot.routeConfig?.path?.split('/')[0];
 
     if (url == 'art-n-craft-product-details') {
@@ -59,7 +57,6 @@ export class CardComponent implements OnInit {
       this.get = true;
       this.wishlist = true;
     }
-    console.log(this.wishlistData);
   }
   onFavourite(data: artNcraftProductDetails) {
     this.isLike = !this.isLike;
@@ -108,5 +105,6 @@ export class CardComponent implements OnInit {
   }
   onPlaceOrder(productData: any) {
     this.dataCommunications.wishlistData.next(productData);
+    console.log('product', productData);
   }
 }

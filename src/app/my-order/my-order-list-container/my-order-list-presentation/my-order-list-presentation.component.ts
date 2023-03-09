@@ -8,13 +8,14 @@ import { DataCommunications } from 'src/app/core/services/datacommunications.ser
 })
 export class MyOrderListPresentationComponent implements OnInit {
   public orders: any;
+  public today = Date.now();
   constructor(private dataCommunications: DataCommunications) {
     this.orders = [];
   }
   ngOnInit(): void {
-    this.dataCommunications.wishlistData$.subscribe((res) => {
-      this.orders = res;
-      console.log(this.orders);
+    this.dataCommunications.wishlistData$.subscribe((res: any) => {
+      this.orders.push(res);
+      console.log('orders', this.orders);
     });
   }
 }
