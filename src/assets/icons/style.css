@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?fanc4g");
-  src: url("fonts/icomoon.eot?fanc4g#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?fanc4g") format("truetype"),
-    url("fonts/icomoon.woff?fanc4g") format("woff"),
-    url("fonts/icomoon.svg?fanc4g#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?eals5x");
+  src: url("fonts/icomoon.eot?eals5x#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?eals5x") format("truetype"),
+    url("fonts/icomoon.woff?eals5x") format("woff"),
+    url("fonts/icomoon.svg?eals5x#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -73,6 +73,12 @@
 }
 .icon-shopping_basket:before {
   content: "\e90f";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
 }
 .icon-cancel-circle:before {
   content: "\ea0d";

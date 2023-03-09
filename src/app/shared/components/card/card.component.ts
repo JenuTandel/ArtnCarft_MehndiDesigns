@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
 import { ArtNCraftProductDetailsService } from 'src/app/art-n-craft/services/art-n-craft-product-details.service';
 import { AuthGuard } from 'src/app/core/guard/auth.guard';
+import { CartService } from 'src/app/core/services/cart.service';
 import { DataCommunications } from 'src/app/core/services/datacommunications.service';
 import { OverlayService } from 'src/app/core/services/overlay.service';
 import { MehndiBookingFormContainerComponent } from 'src/app/mehndi-designs/mehndi-booking-form-container/mehndi-booking-form-container.component';
@@ -34,7 +35,8 @@ export class CardComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private overlayService: OverlayService,
     private dataCommunications: DataCommunications,
-    private artNCraftProductDetailsService: ArtNCraftProductDetailsService
+    private artNCraftProductDetailsService: ArtNCraftProductDetailsService,
+    private cartService: CartService
   ) {
     this.data = {};
     this.productData = {};
@@ -62,7 +64,7 @@ export class CardComponent implements OnInit {
     this.isLike = !this.isLike;
     data.isLike = this.isLike;
     this.artNCraftProductDetailsService
-      .addtoFav(data, data.id)
+      .updateFavData(data, data.id)
       .subscribe((res) => {});
   }
   onBook() {
@@ -103,8 +105,14 @@ export class CardComponent implements OnInit {
       this.router.navigateByUrl('home');
     }
   }
-  onPlaceOrder(productData: any) {
-    this.dataCommunications.wishlistData.next(productData);
+  onPlaceOrder(productData: artNcraftProductDetails) {
+    // this.dataCommunications.wishlistData.next(productData);
+    productData.isLike = false;
+    this.artNCraftProductDetailsService
+      .updateFavData(productData, productData.id)
+      .subscribe((res) => {});
+    this.cartService.postCartData(productData).subscribe((res) => {});
+    this.router.navigateByUrl('shopping-cart');
     console.log('product', productData);
   }
 }

@@ -148,14 +148,15 @@
       "id": 1,
       "productName": "Green Birthday card",
       "price": 100,
-      "productImgpath": "birthday4.webp"
+      "productImgpath": "birthday4.webp",
+      "isLike": false
     },
     {
       "id": 2,
       "productName": "Pink flower Birthday card",
       "price": 150,
       "productImgpath": "birthdaycard1.jpg",
-      "isLike": true
+      "isLike": false
     },
     {
       "id": 3,
@@ -169,7 +170,7 @@
       "productName": "Butterfly Birthday card",
       "price": 500,
       "productImgpath": "birthday2.jpeg",
-      "isLike": true
+      "isLike": false
     },
     {
       "id": 5,
@@ -182,14 +183,15 @@
       "id": 6,
       "productName": "Pink flower Birthday card",
       "price": 150,
-      "productImgpath": "birthdaycard1.jpg"
+      "productImgpath": "birthdaycard1.jpg",
+      "isLike": false
     },
     {
       "id": 7,
       "productName": "Quilling Birthday card",
       "price": 200,
       "productImgpath": "birthday3.jpg",
-      "isLike": true
+      "isLike": false
     },
     {
       "id": 8,
@@ -371,33 +373,22 @@
     }
   ],
   "mehndiBookingInfo": [
+   
+  ],
+  "cartData": [
     {
-      "name": "Jinal Tandel",
-      "address": "Kosamba Pritamnagar",
-      "contactNumber": "09033982833",
-      "date": "2023-03-03",
-      "id": 1
+      "id": 3,
+      "productName": "Quilling Birthday card",
+      "price": 200,
+      "productImgpath": "birthday3.jpg",
+      "isLike": false
     },
     {
-      "name": "Jinal Tandel",
-      "address": "Kosamba Pritamnagar",
-      "contactNumber": "09033982833",
-      "date": "2023-03-05",
-      "id": 2
-    },
-    {
-      "name": "Vishwani Patel",
-      "address": "Dungri, Valsad",
-      "contactNumber": "9904285494",
-      "date": "2023-12-09",
-      "id": 3
-    },
-    {
-      "name": "Vishwani Patel",
-      "address": "Dungri, Valsad",
-      "contactNumber": "09904285494",
-      "date": "2023-03-12",
-      "id": 4
+      "id": 4,
+      "productName": "Butterfly Birthday card",
+      "price": 500,
+      "productImgpath": "birthday2.jpeg",
+      "isLike": false
     }
   ]
 }

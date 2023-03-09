@@ -1,7 +1,4 @@
 export class artNcraftProductDetails {
-  filter() {
-    throw new Error('Method not implemented.');
-  }
   id: number;
   productName: string;
   price: number;

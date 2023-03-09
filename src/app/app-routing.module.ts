@@ -61,6 +61,7 @@ const routes: Routes = [
         (m) => m.MehndiDesignsModule
       ),
   },
+  { path: 'shopping-cart', loadChildren: () => import('./shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule) },
 ];
 
 @NgModule({

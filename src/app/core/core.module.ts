@@ -12,6 +12,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { FakebackendInterceptor } from './interceptor/fakebackend.interceptor';
 import { DataCommunications } from './services/datacommunications.service';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [HeaderComponent, ProfileComponent],
@@ -22,6 +23,7 @@ import { DataCommunications } from './services/datacommunications.service';
     AuthService,
     AuthGuard,
     DataCommunications,
+    CartService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: FakebackendInterceptor,

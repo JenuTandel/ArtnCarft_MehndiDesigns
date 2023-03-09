@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
 import { ArtNCraftProductDetailsService } from 'src/app/art-n-craft/services/art-n-craft-product-details.service';
 import { Pagination } from 'src/app/shared/models/pagination.model';

@@ -21,6 +21,10 @@
       <a class="nav-link" [routerLink]="['/login']" *ngIf="!isLoggedIn"
         >Login</a
       >
+      <div class="d-flex flex-column align-items-center">
+        <span class="icon icon-cart fs-4 text-white mx-4"></span>
+        <span class="text-white">Cart</span>
+      </div>
       <div
         class="profile-icon-wrapper d-flex align-items-center"
         *ngIf="isLoggedIn"

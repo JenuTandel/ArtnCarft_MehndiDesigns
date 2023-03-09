@@ -30,7 +30,7 @@ export class ArtNCraftProductDetailsService {
     );
   }
 
-  addtoFav(
+  updateFavData(
     data: artNcraftProductDetails,
     id: number
   ): Observable<artNcraftProductDetails> {

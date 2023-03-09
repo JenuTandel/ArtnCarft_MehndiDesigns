@@ -1,0 +1,19 @@
+.cart {
+    width: 550px;
+
+    .cart-image-wrapper {
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .product-name {
+        font-size: 25px;
+    }
+}
