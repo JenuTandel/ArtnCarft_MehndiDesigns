@@ -12,6 +12,12 @@ export class DataCommunications {
   public wishlistData$: Observable<any>;
   public wishlistData: Subject<any>;
 
+  public cartData$: Observable<any>;
+  public cartData: Subject<any>;
+
+  public updatedcartData$: Observable<any>;
+  public updatedcartData: Subject<any>;
+
   constructor() {
     this.islogin = new Subject();
     this.islogin$ = this.islogin.asObservable();
@@ -21,5 +27,11 @@ export class DataCommunications {
 
     this.wishlistData = new ReplaySubject();
     this.wishlistData$ = this.wishlistData.asObservable();
+
+    this.cartData = new ReplaySubject();
+    this.cartData$ = this.cartData.asObservable();
+
+    this.updatedcartData = new ReplaySubject();
+    this.updatedcartData$ = this.cartData.asObservable();
   }
 }

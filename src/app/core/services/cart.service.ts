@@ -21,4 +21,24 @@ export class CartService {
   getCartData(): Observable<artNcraftProductDetails[]> {
     return this.http.get<artNcraftProductDetails[]>(`${this.baseUrl}cartData`);
   }
+
+  getCartDataById(id: number): Observable<artNcraftProductDetails> {
+    return this.http.get<artNcraftProductDetails>(
+      `${this.baseUrl}cartData/${id}`
+    );
+  }
+
+  updateCartProductQuantity(
+    id: number,
+    data: artNcraftProductDetails
+  ): Observable<artNcraftProductDetails> {
+    return this.http.put<artNcraftProductDetails>(
+      `${this.baseUrl}cartData/${id}`,
+      data
+    );
+  }
+
+  deleteCartProduct(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}cartData/${id}`);
+  }
 }

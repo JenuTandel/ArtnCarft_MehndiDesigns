@@ -149,28 +149,32 @@
       "productName": "Green Birthday card",
       "price": 100,
       "productImgpath": "birthday4.webp",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 2,
       "productName": "Pink flower Birthday card",
       "price": 150,
       "productImgpath": "birthdaycard1.jpg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 3,
       "productName": "Quilling Birthday card",
       "price": 200,
       "productImgpath": "birthday3.jpg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 4,
       "productName": "Butterfly Birthday card",
       "price": 500,
       "productImgpath": "birthday2.jpeg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 5,
@@ -372,23 +376,31 @@
       "mehndiImgpath": "sm4.jpg"
     }
   ],
-  "mehndiBookingInfo": [
-   
-  ],
+  "mehndiBookingInfo": [],
   "cartData": [
+    {
+      "id": 2,
+      "productName": "Pink flower Birthday card",
+      "price": 0,
+      "productImgpath": "birthdaycard1.jpg",
+      "isLike": false,
+      "quantity": 1
+    },
     {
       "id": 3,
       "productName": "Quilling Birthday card",
-      "price": 200,
+      "price": 2400,
       "productImgpath": "birthday3.jpg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 4,
       "productName": "Butterfly Birthday card",
       "price": 500,
       "productImgpath": "birthday2.jpeg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     }
   ]
 }

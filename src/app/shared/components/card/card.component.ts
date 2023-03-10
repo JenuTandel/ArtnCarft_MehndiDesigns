@@ -108,11 +108,10 @@ export class CardComponent implements OnInit {
   onPlaceOrder(productData: artNcraftProductDetails) {
     // this.dataCommunications.wishlistData.next(productData);
     productData.isLike = false;
+    productData.quantity = 1;
     this.artNCraftProductDetailsService
       .updateFavData(productData, productData.id)
       .subscribe((res) => {});
     this.cartService.postCartData(productData).subscribe((res) => {});
-    this.router.navigateByUrl('shopping-cart');
-    console.log('product', productData);
   }
 }
