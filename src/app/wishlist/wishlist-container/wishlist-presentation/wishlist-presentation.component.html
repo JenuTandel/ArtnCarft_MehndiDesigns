@@ -5,7 +5,17 @@
       class="col-3 d-flex justify-content-center"
       *ngFor="let item of wishlistDataResponse"
     >
-      <app-card [wishlistData]="item"></app-card>
+      <app-card
+        [wishlistData]="item"
+        (updatedWishList)="updatedWishList($event)"
+      ></app-card>
     </div>
+  </div>
+  <div
+    class="d-flex flex-column align-items-center"
+    *ngIf="wishlistDataResponse.length == 0"
+  >
+    <h3>Your wishlist is empty</h3>
+    <p>Save items that you like in your wishlist.</p>
   </div>
 </div>

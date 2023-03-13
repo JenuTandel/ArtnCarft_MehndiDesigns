@@ -61,6 +61,7 @@
     src="./../../../../assets/database/images/cancel.svg"
     class="icon-cancel"
     *ngIf="wishlist == true"
+    (click)="onRemoveFromWishlist(wishlistData, 'remove')"
   />
   <div
     class="card-body mt-4 d-flex align-items-center justify-content-between px-4 my-auto"
@@ -72,7 +73,7 @@
     </div>
     <span
       class="icon-cart text-success"
-      (click)="onPlaceOrder(wishlistData)"
+      (click)="AddtoCart(wishlistData, 'add')"
     ></span>
   </div>
 </div>

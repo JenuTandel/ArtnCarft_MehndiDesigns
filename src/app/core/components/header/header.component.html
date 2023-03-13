@@ -7,8 +7,10 @@
       <a class="nav-link" [routerLink]="['/home']">Home</a>
       <a class="nav-link" [routerLink]="['/about-us']">About us</a>
       <div ngbDropdown>
-        <a class="nav-link" id="gfg" ngbDropdownToggle>Services</a>
-        <div ngbDropdownMenu="gfg">
+        <a class="nav-link service-dropdown" id="services" ngbDropdownToggle
+          >Services</a
+        >
+        <div ngbDropdownMenu="services">
           <button ngbDropdownItem [routerLink]="['/art-n-craft']">
             Art n Craft
           </button>
@@ -21,9 +23,13 @@
       <a class="nav-link" [routerLink]="['/login']" *ngIf="!isLoggedIn"
         >Login</a
       >
-      <div class="d-flex flex-column align-items-center" *ngIf="isLoggedIn">
+      <div
+        class="shopping-cart d-flex flex-column align-items-center"
+        [routerLink]="['/shopping-cart']"
+        *ngIf="isLoggedIn"
+      >
         <span class="icon icon-cart fs-4 text-white mx-4"></span>
-        <span class="text-white" [routerLink]="['/shopping-cart']">Cart</span>
+        <span class="text-white">Cart</span>
       </div>
       <div
         class="profile-icon-wrapper d-flex align-items-center"

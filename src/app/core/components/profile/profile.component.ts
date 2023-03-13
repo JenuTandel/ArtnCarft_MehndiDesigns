@@ -33,4 +33,7 @@ export class ProfileComponent {
     });
     this.router.navigateByUrl('profile');
   }
+  closeOverlay() {
+    this.overlayService.closeDialog.next(true);
+  }
 }

@@ -5,6 +5,7 @@ export class artNcraftProductDetails {
   productImgpath: string;
   isLike: boolean;
   quantity: number;
+  totalPrice: number;
 
   constructor(
     id: number,
@@ -12,7 +13,8 @@ export class artNcraftProductDetails {
     price: number,
     productImgpath: string,
     isLike: boolean,
-    quantity: number
+    quantity: number,
+    totalPrice: number
   ) {
     this.id = id;
     this.productName = productName;
@@ -20,5 +22,6 @@ export class artNcraftProductDetails {
     this.productImgpath = productImgpath;
     this.isLike = isLike;
     this.quantity = quantity;
+    this.totalPrice = totalPrice;
   }
 }

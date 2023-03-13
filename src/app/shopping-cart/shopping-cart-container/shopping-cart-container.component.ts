@@ -22,16 +22,13 @@ export class ShoppingCartContainerComponent implements OnInit {
   }
 
   UpdateProductQuantity(updatedData: artNcraftProductDetails) {
-    console.log(updatedData);
-
     this.cartService
       .updateCartProductQuantity(updatedData.id, updatedData)
-      .subscribe((res) => {
-        console.log('updated', res);
-      });
+      .subscribe((res) => {});
   }
 
   removeProduct(id: number) {
     this.cartService.deleteCartProduct(id).subscribe((res) => {});
+    this.getCartData();
   }
 }

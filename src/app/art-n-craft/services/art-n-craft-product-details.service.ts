@@ -45,4 +45,10 @@ export class ArtNCraftProductDetailsService {
       `${this.baseUrl}birthdayCards`
     );
   }
+
+  deleteFavData(id: number): Observable<artNcraftProductDetails> {
+    return this.http.delete<artNcraftProductDetails>(
+      `${this.baseUrl}birthdayCards/${id}`
+    );
+  }
 }

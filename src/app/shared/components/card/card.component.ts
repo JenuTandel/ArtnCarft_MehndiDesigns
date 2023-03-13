@@ -2,9 +2,11 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  EventEmitter,
   Input,
   OnChanges,
   OnInit,
+  Output,
   SimpleChanges,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -26,6 +28,7 @@ export class CardComponent implements OnInit {
   @Input() data: any;
   @Input() productData: any;
   @Input() wishlistData: any;
+  @Output() updatedWishList: EventEmitter<any>;
   public get?: boolean;
   public mehndi?: boolean;
   public isLike: boolean;
@@ -44,6 +47,7 @@ export class CardComponent implements OnInit {
     this.get = false;
     this.isLike = false;
     this.wishlist = false;
+    this.updatedWishList = new EventEmitter();
   }
   ngOnInit(): void {
     const url = this.activatedRoute.snapshot.routeConfig?.path?.split('/')[0];
@@ -105,13 +109,17 @@ export class CardComponent implements OnInit {
       this.router.navigateByUrl('home');
     }
   }
-  onPlaceOrder(productData: artNcraftProductDetails) {
+  AddtoCart(productData: artNcraftProductDetails, action: string) {
+    this.updatedWishList.emit({ productData, action });
     // this.dataCommunications.wishlistData.next(productData);
-    productData.isLike = false;
-    productData.quantity = 1;
-    this.artNCraftProductDetailsService
-      .updateFavData(productData, productData.id)
-      .subscribe((res) => {});
-    this.cartService.postCartData(productData).subscribe((res) => {});
+    // productData.isLike = false;
+    // productData.quantity = 1;
+    // this.artNCraftProductDetailsService
+    //   .updateFavData(productData, productData.id)
+    //   .subscribe((res) => {});
+    // this.cartService.postCartData(productData).subscribe((res) => {});
+  }
+  onRemoveFromWishlist(productData: artNcraftProductDetails, action: string) {
+    this.updatedWishList.emit({ productData, action });
   }
 }

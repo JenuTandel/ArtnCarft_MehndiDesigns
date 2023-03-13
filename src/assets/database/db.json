@@ -150,7 +150,8 @@
       "price": 100,
       "productImgpath": "birthday4.webp",
       "isLike": false,
-      "quantity": 1
+      "quantity": 1,
+      "totalPrice": 100
     },
     {
       "id": 2,
@@ -158,7 +159,8 @@
       "price": 150,
       "productImgpath": "birthdaycard1.jpg",
       "isLike": false,
-      "quantity": 1
+      "quantity": 1,
+      "totalPrice": 150
     },
     {
       "id": 3,
@@ -166,7 +168,8 @@
       "price": 200,
       "productImgpath": "birthday3.jpg",
       "isLike": false,
-      "quantity": 1
+      "quantity": 1,
+      "totalPrice": 200
     },
     {
       "id": 4,
@@ -174,34 +177,42 @@
       "price": 500,
       "productImgpath": "birthday2.jpeg",
       "isLike": false,
-      "quantity": 1
+      "quantity": 1,
+      "totalPrice": 500
     },
     {
       "id": 5,
       "productName": "Green Birthday card",
       "price": 100,
       "productImgpath": "birthday4.webp",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 6,
       "productName": "Pink flower Birthday card",
       "price": 150,
       "productImgpath": "birthdaycard1.jpg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1,
+      "totalPrice": 150
     },
     {
       "id": 7,
       "productName": "Quilling Birthday card",
       "price": 200,
       "productImgpath": "birthday3.jpg",
-      "isLike": false
+      "isLike": false,
+      "quantity": 1,
+      "totalPrice": 200
     },
     {
       "id": 8,
       "productName": "Butterfly Birthday card",
       "price": 500,
-      "productImgpath": "birthday2.jpeg"
+      "productImgpath": "birthday2.jpeg",
+      "isLike": false,
+      "quantity": 1
     },
     {
       "id": 9,
@@ -379,28 +390,13 @@
   "mehndiBookingInfo": [],
   "cartData": [
     {
-      "id": 2,
-      "productName": "Pink flower Birthday card",
-      "price": 0,
-      "productImgpath": "birthdaycard1.jpg",
+      "id": 1,
+      "productName": "Green Birthday card",
+      "price": 100,
+      "productImgpath": "birthday4.webp",
       "isLike": false,
-      "quantity": 1
-    },
-    {
-      "id": 3,
-      "productName": "Quilling Birthday card",
-      "price": 2400,
-      "productImgpath": "birthday3.jpg",
-      "isLike": false,
-      "quantity": 1
-    },
-    {
-      "id": 4,
-      "productName": "Butterfly Birthday card",
-      "price": 500,
-      "productImgpath": "birthday2.jpeg",
-      "isLike": false,
-      "quantity": 1
+      "quantity": 3,
+      "totalPrice": 300
     }
   ]
 }

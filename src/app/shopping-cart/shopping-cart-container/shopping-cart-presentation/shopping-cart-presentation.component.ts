@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
-import { DataCommunications } from 'src/app/core/services/datacommunications.service';
 import { ShoppingCartPresenterService } from '../shopping-cart-presenter/shopping-cart-presenter.service';
 
 @Component({
@@ -14,7 +13,11 @@ export class ShoppingCartPresentationComponent {
     cartDataResponse: artNcraftProductDetails[] | null
   ) {
     if (cartDataResponse) {
-      this._cartDataResponse = this._cartDataResponse.concat(cartDataResponse);
+      this._cartDataResponse = cartDataResponse;
+      for (let i = 0; i < this._cartDataResponse.length; i++) {
+        let price = this._cartDataResponse[i].totalPrice;
+        this.totalMRP = this.totalMRP + price;
+      }
     }
   }
   public get cartDataResponse(): artNcraftProductDetails[] {
@@ -23,6 +26,8 @@ export class ShoppingCartPresentationComponent {
   @Output() Cartid: EventEmitter<number>;
   @Output() UpdatedData: EventEmitter<artNcraftProductDetails>;
   public today = Date.now();
+  public onQuantity: boolean;
+  public totalMRP: number;
   public updatedCartQuantity: artNcraftProductDetails;
   private _cartDataResponse: artNcraftProductDetails[];
 
@@ -30,6 +35,8 @@ export class ShoppingCartPresentationComponent {
     private shoppingCartPresenterService: ShoppingCartPresenterService
   ) {
     this._cartDataResponse = [];
+    this.onQuantity = false;
+    this.totalMRP = 0;
     this.Cartid = new EventEmitter();
     this.UpdatedData = new EventEmitter();
 
@@ -40,23 +47,37 @@ export class ShoppingCartPresentationComponent {
       price: 0,
       quantity: 0,
       isLike: false,
+      totalPrice: 0,
     };
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.cartDataResponse);
+
+    this.cartDataResponse.forEach((res) => {
+      res.totalPrice = res.price;
+    });
+  }
 
   onPlus(data: artNcraftProductDetails) {
+    this.onQuantity = true;
     this.updatedCartQuantity =
       this.shoppingCartPresenterService.IncreaseQuantity(data);
+    this.totalMRP = this.totalMRP + this.updatedCartQuantity.price;
     this.UpdatedData.emit(this.updatedCartQuantity);
   }
   onMinus(data: artNcraftProductDetails) {
-    this.updatedCartQuantity =
-      this.shoppingCartPresenterService.DecreaseQuantity(data);
-    console.log('updated', this.updatedCartQuantity);
-    this.UpdatedData.emit(this.updatedCartQuantity);
+    this.onQuantity = true;
+    if (data.quantity == 1) {
+    } else {
+      this.updatedCartQuantity =
+        this.shoppingCartPresenterService.DecreaseQuantity(data);
+      this.totalMRP = this.totalMRP - this.updatedCartQuantity.price;
+      this.UpdatedData.emit(this.updatedCartQuantity);
+    }
   }
 
-  onRemove(id: number) {
-    this.Cartid.emit(id);
+  onRemove(data: artNcraftProductDetails) {
+    this.totalMRP = 0;
+    this.Cartid.emit(data.id);
   }
 }
