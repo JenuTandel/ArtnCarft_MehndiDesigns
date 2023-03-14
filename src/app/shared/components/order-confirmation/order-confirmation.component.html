@@ -1,0 +1,17 @@
+<div
+  class="order-confirmation d-flex flex-column bg-white position-absolute top-50 start-50 translate-middle rounded-3"
+>
+  <p class="fs-3 mb-4">Confirm Your Order???</p>
+  <div class="d-flex justify-content-end">
+    <button
+      type="button"
+      class="btn btn-success text-white me-4"
+      (click)="onConfirm()"
+    >
+      Confirm
+    </button>
+    <button type="button" class="btn btn-light text-dark" (click)="onCancel()">
+      Cancel
+    </button>
+  </div>
+</div>

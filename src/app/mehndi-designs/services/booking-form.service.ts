@@ -19,4 +19,10 @@ export class BookingFormService {
       bookingDetails
     );
   }
+
+  getBookingInfo(): Observable<mehndiBookingForm[]> {
+    return this.http.get<mehndiBookingForm[]>(
+      `${this.baseUrl}mehndiBookingInfo`
+    );
+  }
 }

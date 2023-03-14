@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
+import { DataCommunications } from 'src/app/core/services/datacommunications.service';
+import { OverlayService } from 'src/app/core/services/overlay.service';
+import { OrderConfirmationComponent } from 'src/app/shared/components/order-confirmation/order-confirmation.component';
 import { ShoppingCartPresenterService } from '../shopping-cart-presenter/shopping-cart-presenter.service';
 
 @Component({
@@ -24,21 +27,27 @@ export class ShoppingCartPresentationComponent {
     return this._cartDataResponse;
   }
   @Output() Cartid: EventEmitter<number>;
+  @Output() OrderData: EventEmitter<artNcraftProductDetails[]>;
   @Output() UpdatedData: EventEmitter<artNcraftProductDetails>;
   public today = Date.now();
   public onQuantity: boolean;
   public totalMRP: number;
+  public orderConfirm: boolean;
   public updatedCartQuantity: artNcraftProductDetails;
   private _cartDataResponse: artNcraftProductDetails[];
 
   constructor(
-    private shoppingCartPresenterService: ShoppingCartPresenterService
+    private shoppingCartPresenterService: ShoppingCartPresenterService,
+    private overlayService: OverlayService,
+    private dataCommunication: DataCommunications
   ) {
     this._cartDataResponse = [];
     this.onQuantity = false;
     this.totalMRP = 0;
+    this.orderConfirm = false;
     this.Cartid = new EventEmitter();
     this.UpdatedData = new EventEmitter();
+    this.OrderData = new EventEmitter();
 
     this.updatedCartQuantity = {
       id: 0,
@@ -79,5 +88,20 @@ export class ShoppingCartPresentationComponent {
   onRemove(data: artNcraftProductDetails) {
     this.totalMRP = 0;
     this.Cartid.emit(data.id);
+  }
+
+  placeOrder() {
+    this.overlayService.openDialog(OrderConfirmationComponent);
+    this.dataCommunication.isOrderConfirm$.subscribe((res) => {
+      this.orderConfirm = res;
+      if (this.orderConfirm == true) {
+        // console.log('c', this.cartDataResponse);
+        this.OrderData.emit(this.cartDataResponse);
+      }
+    });
+
+    // if (this.orderConfirm == false) {
+    //   this.overlayService.closeDialog.next(true);
+    // }
   }
 }

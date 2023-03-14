@@ -1,5 +1,6 @@
 <div class="d-flex flex-column align-items-center">
   <h1 class="text-primary mb-5">Orders</h1>
+  <h3 class="mb-4">Art-n-Craft Orders</h3>
   <table class="table table-bordered table-striped bg-white">
     <thead>
       <tr>
@@ -19,6 +20,24 @@
         <td>{{ today | date }}</td>
         <td>abc</td>
         <td>abc</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="my-4">Mehndi Orders</h3>
+  <table class="table table-bordered table-striped bg-white">
+    <thead>
+      <tr>
+        <th class="fs-5">Sr. No.</th>
+        <th class="fs-5">Booking Date</th>
+        <th class="fs-5">Confirmation Status</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of mehndiBooking; let j = index">
+      <tr>
+        <td>{{ j + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.contactNumber }}</td>
       </tr>
     </tbody>
   </table>

@@ -9,8 +9,8 @@ export class DataCommunications {
   public idData$: Observable<Object>;
   public idData: Subject<Object>;
 
-  public wishlistData$: Observable<any>;
-  public wishlistData: Subject<any>;
+  public isOrderConfirm$: Observable<boolean>;
+  public isOrderConfirm: Subject<boolean>;
 
   public cartData$: Observable<any>;
   public cartData: Subject<any>;
@@ -25,8 +25,8 @@ export class DataCommunications {
     this.idData = new Subject();
     this.idData$ = this.idData.asObservable();
 
-    this.wishlistData = new ReplaySubject();
-    this.wishlistData$ = this.wishlistData.asObservable();
+    this.isOrderConfirm = new Subject();
+    this.isOrderConfirm$ = this.isOrderConfirm.asObservable();
 
     this.cartData = new ReplaySubject();
     this.cartData$ = this.cartData.asObservable();

@@ -9,10 +9,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guard/auth.guard';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { FakebackendInterceptor } from './interceptor/fakebackend.interceptor';
 import { DataCommunications } from './services/datacommunications.service';
 import { CartService } from './services/cart.service';
+import { MyOrderService } from './services/myorder.service';
 
 @NgModule({
   declarations: [HeaderComponent, ProfileComponent],
@@ -24,6 +24,7 @@ import { CartService } from './services/cart.service';
     AuthGuard,
     DataCommunications,
     CartService,
+    MyOrderService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: FakebackendInterceptor,

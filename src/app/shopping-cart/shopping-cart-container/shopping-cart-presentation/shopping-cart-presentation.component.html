@@ -1,46 +1,55 @@
-<h1 class="text-primary text-center mb-4">Your Cart</h1>
-<div
-  class="cart d-flex bg-white p-3 mb-4 position-relative"
-  *ngFor="let i of cartDataResponse"
->
-  <div class="cart-image-wrapper">
-    <img [src]="'./assets/database/images/' + i.productImgpath" />
-  </div>
-  <div class="cart-data d-flex flex-column justify-content-center ms-3">
-    <p class="product-name mb-3 fw-semibold">{{ i.productName }}</p>
-    <div class="d-flex align-items-center mb-3">
-      <span class="fs-5 me-3 fw-semibold">Quantity: </span>
-      <div class="py-2 px-3 bg-secondary rounded-3">
-        <span class="icon-minus" (click)="onMinus(i)"></span>
-        <span class="mx-4">{{ i.quantity }}</span>
-        <span class="icon-plus" (click)="onPlus(i)"></span>
-      </div>
+<div class="d-flex flex-column w-100">
+  <h1 class="text-primary text-center mb-4">Your Cart</h1>
+  <div
+    class="cart d-flex bg-white p-3 mb-4 position-relative"
+    *ngFor="let i of cartDataResponse"
+  >
+    <div class="cart-image-wrapper">
+      <img [src]="'./assets/database/images/' + i.productImgpath" />
     </div>
-    <span class="fs-5"
-      ><span class="fw-semibold">Price:</span> {{ i.totalPrice }}Rs.</span
+    <div class="cart-data d-flex flex-column justify-content-center ms-3">
+      <p class="product-name mb-3 fw-semibold">{{ i.productName }}</p>
+      <div class="d-flex align-items-center mb-3">
+        <span class="fs-5 me-3 fw-semibold">Quantity: </span>
+        <div class="py-2 px-3 bg-secondary rounded-3">
+          <span class="icon-minus" (click)="onMinus(i)"></span>
+          <span class="mx-4">{{ i.quantity }}</span>
+          <span class="icon-plus" (click)="onPlus(i)"></span>
+        </div>
+      </div>
+      <span class="fs-5"
+        ><span class="fw-semibold">Price:</span> {{ i.totalPrice }}Rs.</span
+      >
+    </div>
+    <span
+      class="icon icon-cancel-circle position-absolute"
+      (click)="onRemove(i)"
     >
+    </span>
   </div>
-  <span class="icon icon-cancel-circle position-absolute" (click)="onRemove(i)">
-  </span>
-</div>
-<div class="d-flex flex-column" *ngIf="cartDataResponse.length != 0">
-  <div class="fw-semibold mb-3 fs-3">Total MRP: {{ totalMRP }}</div>
-  <div class="text-center">
-    <button type="button" class="btn btn-warning w-100 text-white">
-      Place Order
-    </button>
+  <div class="d-flex flex-column" *ngIf="cartDataResponse.length != 0">
+    <div class="fw-semibold mb-3 fs-3">Total MRP: {{ totalMRP }} Rs.</div>
+    <div class="text-center">
+      <button
+        type="button"
+        class="btn btn-warning w-100 text-white"
+        (click)="placeOrder()"
+      >
+        Place Order
+      </button>
+    </div>
   </div>
-</div>
 
-<div
-  *ngIf="cartDataResponse.length == 0"
-  class="d-flex flex-column align-items-center"
->
-  <img
-    src="./../../../../assets/database/images/shopping-cart.png"
-    height="200px"
-    width="200px"
-    alt="shopping-cart"
-  />
-  <h3>Your Cart is empty</h3>
+  <div
+    *ngIf="cartDataResponse.length == 0"
+    class="d-flex flex-column align-items-center"
+  >
+    <img
+      src="./../../../../assets/database/images/shopping-cart.png"
+      height="200px"
+      width="200px"
+      alt="shopping-cart"
+    />
+    <h3>Your Cart is empty</h3>
+  </div>
 </div>

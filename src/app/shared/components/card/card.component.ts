@@ -71,7 +71,7 @@ export class CardComponent implements OnInit {
       .updateFavData(data, data.id)
       .subscribe((res) => {});
   }
-  onBook() {
+  onBook(mehndiInfo: any) {
     const userdata = JSON.parse(localStorage.getItem('userToken')!);
     if (userdata) {
       this.overlayService.openDialog(MehndiBookingFormContainerComponent);
