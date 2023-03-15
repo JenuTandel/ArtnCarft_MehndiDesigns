@@ -74,6 +74,7 @@ export class CardComponent implements OnInit {
   onBook(mehndiInfo: any) {
     const userdata = JSON.parse(localStorage.getItem('userToken')!);
     if (userdata) {
+      this.dataCommunications.mehndiBookingInfo.next(mehndiInfo);
       this.overlayService.openDialog(MehndiBookingFormContainerComponent);
     } else {
       this.router.navigateByUrl('login');

@@ -19,11 +19,16 @@ export class MyOrderListContainerComponent implements OnInit {
     this.mehndiOrders = [];
   }
   ngOnInit(): void {
-    this.myorderService
-      .getMyOrdersData()
-      .subscribe((res: artNcraftProductDetails[]) => {
+    this.myorderService.getMyOrdersData().subscribe((res: any) => {
+      if (res) {
+        console.log(res);
         this.myOrders = res;
-      });
+        // res.forEach((data) => {
+        // this.myOrders.push(data);
+        // });
+        // this.myOrders.push(res);
+      }
+    });
 
     this.mehndiBookingService.getBookingInfo().subscribe((res) => {
       this.mehndiOrders = res;

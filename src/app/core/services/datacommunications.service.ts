@@ -18,6 +18,9 @@ export class DataCommunications {
   public updatedcartData$: Observable<any>;
   public updatedcartData: Subject<any>;
 
+  public mehndiBookingInfo$: Observable<any>;
+  public mehndiBookingInfo: Subject<any>;
+
   constructor() {
     this.islogin = new Subject();
     this.islogin$ = this.islogin.asObservable();
@@ -33,5 +36,8 @@ export class DataCommunications {
 
     this.updatedcartData = new ReplaySubject();
     this.updatedcartData$ = this.cartData.asObservable();
+
+    this.mehndiBookingInfo = new BehaviorSubject('');
+    this.mehndiBookingInfo$ = this.mehndiBookingInfo.asObservable();
   }
 }

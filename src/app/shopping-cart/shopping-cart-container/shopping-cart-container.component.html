@@ -2,5 +2,6 @@
   [cartDataResponse]="cartData$ | async"
   (UpdatedData)="UpdateProductQuantity($event)"
   (Cartid)="removeProduct($event)"
+  (OrderData)="deleteOrderData($event)"
   (OrderData)="postOrderData($event)"
 ></app-shopping-cart-presentation>

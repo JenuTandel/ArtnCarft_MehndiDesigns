@@ -1,34 +1,47 @@
 <div class="d-flex flex-column align-items-center">
   <h1 class="text-primary mb-5">Orders</h1>
   <h3 class="mb-4">Art-n-Craft Orders</h3>
-  <table class="table table-bordered table-striped bg-white">
+  <table class="table table-bordered border-primary bg-white">
     <thead>
+      <tr class="text-center">
+        <th class="fs-4" rowspan="2">Order No.</th>
+        <th class="fs-4" colspan="8">Products</th>
+      </tr>
       <tr>
-        <th class="fs-5">Sr. No.</th>
+        <th class="fs-5">Item No.</th>
         <th class="fs-5">Product Name</th>
-        <th class="fs-5">Price</th>
+        <th class="fs-5">Price (Rs.)</th>
+        <th class="fs-5">Quantity</th>
+        <th class="fs-5">Total Price (Rs.)</th>
         <th class="fs-5">Booking Date</th>
         <th class="fs-5">Confirmation Status</th>
         <th class="fs-5">Delivery Status</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of orders; let i = index">
+    <tbody *ngFor="let data of orders; let i = index">
       <tr>
-        <td>{{ i + 1 }}</td>
+        <td [attr.rowspan]="data.products.length + 1">{{ data.id }}</td>
+      </tr>
+      <tr *ngFor="let item of data.products; let j = index">
+        <td>{{ j + 1 }}</td>
         <td>{{ item.productName }}</td>
         <td>{{ item.price }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.totalPrice }}</td>
         <td>{{ today | date }}</td>
-        <td>abc</td>
-        <td>abc</td>
+        <td>Pending</td>
+        <td>Pending</td>
       </tr>
     </tbody>
   </table>
 
   <h3 class="my-4">Mehndi Orders</h3>
-  <table class="table table-bordered table-striped bg-white">
+  <table class="table table-bordered border-primary bg-white">
     <thead>
       <tr>
         <th class="fs-5">Sr. No.</th>
+        <th class="fs-5">Mehndi Name</th>
+        <th class="fs-5">Mehndi Price</th>
         <th class="fs-5">Booking Date</th>
         <th class="fs-5">Confirmation Status</th>
       </tr>
@@ -36,8 +49,10 @@
     <tbody *ngFor="let item of mehndiBooking; let j = index">
       <tr>
         <td>{{ j + 1 }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.contactNumber }}</td>
+        <td>{{ item.mehndiName }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.date | date }}</td>
+        <td>Pending</td>
       </tr>
     </tbody>
   </table>

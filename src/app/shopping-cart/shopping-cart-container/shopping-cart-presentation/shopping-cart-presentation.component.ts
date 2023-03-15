@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { artNcraftProductDetails } from 'src/app/art-n-craft/models/art-n-craft-product-details.model';
 import { DataCommunications } from 'src/app/core/services/datacommunications.service';
 import { OverlayService } from 'src/app/core/services/overlay.service';
@@ -39,7 +40,8 @@ export class ShoppingCartPresentationComponent {
   constructor(
     private shoppingCartPresenterService: ShoppingCartPresenterService,
     private overlayService: OverlayService,
-    private dataCommunication: DataCommunications
+    private dataCommunication: DataCommunications,
+    private router: Router
   ) {
     this._cartDataResponse = [];
     this.onQuantity = false;
@@ -95,13 +97,11 @@ export class ShoppingCartPresentationComponent {
     this.dataCommunication.isOrderConfirm$.subscribe((res) => {
       this.orderConfirm = res;
       if (this.orderConfirm == true) {
-        // console.log('c', this.cartDataResponse);
         this.OrderData.emit(this.cartDataResponse);
       }
     });
-
-    // if (this.orderConfirm == false) {
-    //   this.overlayService.closeDialog.next(true);
-    // }
+  }
+  onShopNow() {
+    this.router.navigateByUrl('art-n-craft');
   }
 }
